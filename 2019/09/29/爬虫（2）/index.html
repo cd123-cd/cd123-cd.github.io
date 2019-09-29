@@ -5,19 +5,19 @@
   
 
   
-  <title>爬虫（1） | Hexo</title>
+  <title>爬虫（2） | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="简单爬虫架构爬虫调度端-&amp;gt;URL管理器-&amp;gt;网页下载器-&amp;gt;网页解析器-&amp;gt;价值数据网页解析器再返回URL管理器简单爬虫架构-运行流程调度器询问管理器有没有待爬URL，URL返回是和否，是-&amp;gt;URL管理器会从调度器中取出一个待爬取URL，URL管理器会从中返回URL给调度器，调度器将URL传给下载器，下载器会将下载URL内容，然后返回给调度器，调度器再将内容传给解析器，解析">
+  <meta name="description" content="*URL管理器管理URL集合和已抓取的URL集合防止重复抓取，循环抓取需要支持的功能：1.添加新的URL到待爬取集合（2需要判断待添加URL是否在容器中）3同时也可以从容其中获取待爬取URL（4判断容器中还有没有待爬取的URL）（5如果URL爬取之后将URL从待爬取移动到已爬取）实现方式：1内存python-&amp;gt;待爬取URL集合set（），已爬取URL集合set（）2关系数据库MySQL-&amp;g">
 <meta property="og:type" content="article">
-<meta property="og:title" content="爬虫（1）">
-<meta property="og:url" content="http://yoursite.com/2019/09/28/爬虫（1）/index.html">
+<meta property="og:title" content="爬虫（2）">
+<meta property="og:url" content="http://yoursite.com/2019/09/29/爬虫（2）/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="简单爬虫架构爬虫调度端-&amp;gt;URL管理器-&amp;gt;网页下载器-&amp;gt;网页解析器-&amp;gt;价值数据网页解析器再返回URL管理器简单爬虫架构-运行流程调度器询问管理器有没有待爬URL，URL返回是和否，是-&amp;gt;URL管理器会从调度器中取出一个待爬取URL，URL管理器会从中返回URL给调度器，调度器将URL传给下载器，下载器会将下载URL内容，然后返回给调度器，调度器再将内容传给解析器，解析">
+<meta property="og:description" content="*URL管理器管理URL集合和已抓取的URL集合防止重复抓取，循环抓取需要支持的功能：1.添加新的URL到待爬取集合（2需要判断待添加URL是否在容器中）3同时也可以从容其中获取待爬取URL（4判断容器中还有没有待爬取的URL）（5如果URL爬取之后将URL从待爬取移动到已爬取）实现方式：1内存python-&amp;gt;待爬取URL集合set（），已爬取URL集合set（）2关系数据库MySQL-&amp;g">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-28T16:21:09.270Z">
+<meta property="og:updated_time" content="2019-09-29T15:23:02.498Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="爬虫（1）">
-<meta name="twitter:description" content="简单爬虫架构爬虫调度端-&amp;gt;URL管理器-&amp;gt;网页下载器-&amp;gt;网页解析器-&amp;gt;价值数据网页解析器再返回URL管理器简单爬虫架构-运行流程调度器询问管理器有没有待爬URL，URL返回是和否，是-&amp;gt;URL管理器会从调度器中取出一个待爬取URL，URL管理器会从中返回URL给调度器，调度器将URL传给下载器，下载器会将下载URL内容，然后返回给调度器，调度器再将内容传给解析器，解析">
+<meta name="twitter:title" content="爬虫（2）">
+<meta name="twitter:description" content="*URL管理器管理URL集合和已抓取的URL集合防止重复抓取，循环抓取需要支持的功能：1.添加新的URL到待爬取集合（2需要判断待添加URL是否在容器中）3同时也可以从容其中获取待爬取URL（4判断容器中还有没有待爬取的URL）（5如果URL爬取之后将URL从待爬取移动到已爬取）实现方式：1内存python-&amp;gt;待爬取URL集合set（），已爬取URL集合set（）2关系数据库MySQL-&amp;g">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-爬虫（1）" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-爬虫（2）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/09/28/爬虫（1）/" class="article-date">
-  <time datetime="2019-09-27T16:00:00.000Z" itemprop="datePublished">2019-09-28</time>
+    <a href="/2019/09/29/爬虫（2）/" class="article-date">
+  <time datetime="2019-09-28T16:00:00.000Z" itemprop="datePublished">2019-09-29</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      爬虫（1）
+      爬虫（2）
     </h1>
   
 
@@ -86,12 +86,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>简单爬虫架构<br>爬虫调度端-&gt;URL管理器-&gt;网页下载器-&gt;网页解析器-&gt;价值数据<br>网页解析器再返回URL管理器<br>简单爬虫架构-运行流程<br>调度器询问管理器有没有待爬URL，URL返回是和否，是-&gt;URL管理器会从调度器中取出一个待爬取URL，URL管理器会从中返回URL给调度器，调度器将URL传给下载器，下载器会将下载URL内容，然后返回给调度器，调度器再将内容传给解析器，解析器解析后会将新的URL和价值数据返回给调度器，然后调度器会将收集到的价值数据传送给应用，另一方面，会将新增的待爬取URL补充给URL管理器输出价值数据</p>
+        <p>*<em>URL管理器<br>管理URL集合和已抓取的URL集合防止重复抓取，循环抓取<br>需要支持的功能：1.添加新的URL到待爬取集合（2需要判断待添加URL是否在容器中）3同时也可以从容其中获取待爬取URL（4判断容器中还有没有待爬取的URL）（5如果URL爬取之后将URL从待爬取移动到已爬取）<br>实现方式：1内存python-&gt;待爬取URL集合set（），已爬取URL集合set（）<br>2关系数据库MySQL-&gt;urls(url,is_crawled)(永久存储)<br>3缓存数据库redis-&gt;待爬取URL集合set（），已爬取URL集合set（）<br>*</em>网页下载器<br>将互联网上URL对应的网页下载到本地的工具<br>网页下载器通过URL访问互联网，以HTML形式返回网页下载器存储成本地文件或内存自符串<br>Python的网页下载器</p>
+<ol>
+<li>urllib2—python官方基础模块<br>（1）.import    1</li>
+<li>requests—第三方包更强大</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/28/爬虫（1）/" data-id="ck154wkv80002eoter0sr9bua" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/29/爬虫（2）/" data-id="ck154wkvv0004eotez3um95v7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -100,19 +104,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/09/29/爬虫（2）/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          爬虫（2）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/24/blog-搭建/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/09/28/爬虫（1）/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">blog 搭建</div>
+      <div class="article-nav-title">爬虫（1）</div>
     </a>
   
 </nav>

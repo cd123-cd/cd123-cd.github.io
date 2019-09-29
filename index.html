@@ -62,6 +62,47 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-爬虫（2）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/29/爬虫（2）/" class="article-date">
+  <time datetime="2019-09-28T16:00:00.000Z" itemprop="datePublished">2019-09-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/29/爬虫（2）/">爬虫（2）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>*<em>URL管理器<br>管理URL集合和已抓取的URL集合防止重复抓取，循环抓取<br>需要支持的功能：1.添加新的URL到待爬取集合（2需要判断待添加URL是否在容器中）3同时也可以从容其中获取待爬取URL（4判断容器中还有没有待爬取的URL）（5如果URL爬取之后将URL从待爬取移动到已爬取）<br>实现方式：1内存python-&gt;待爬取URL集合set（），已爬取URL集合set（）<br>2关系数据库MySQL-&gt;urls(url,is_crawled)(永久存储)<br>3缓存数据库redis-&gt;待爬取URL集合set（），已爬取URL集合set（）<br>*</em>网页下载器<br>将互联网上URL对应的网页下载到本地的工具<br>网页下载器通过URL访问互联网，以HTML形式返回网页下载器存储成本地文件或内存自符串<br>Python的网页下载器</p>
+<ol>
+<li>urllib2—python官方基础模块<br>（1）.import    1</li>
+<li>requests—第三方包更强大</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/29/爬虫（2）/" data-id="ck154wkvv0004eotez3um95v7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-爬虫（1）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/28/爬虫（1）/" class="article-date">
@@ -89,7 +130,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/28/爬虫（1）/" data-id="ck13rnjmj00033ste1xnz4qj6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/28/爬虫（1）/" data-id="ck154wkv80002eoter0sr9bua" class="article-share-link">Share</a>
       
       
     </footer>
@@ -126,7 +167,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/24/blog-搭建/" data-id="ck13rnjlt00003stehpfq80oi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/24/blog-搭建/" data-id="ck154wkuu0000eotea3658on5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -162,7 +203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/22/我的第一篇博客文章/" data-id="ck13rnjm100023stew2lyyfbo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/22/我的第一篇博客文章/" data-id="ck154wkv50001eotey9gxl90c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -211,7 +252,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/22/hello-world/" data-id="ck13rnjlz00013ste4o9z12i4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/22/hello-world/" data-id="ck154wkvb0003eotehp6qh6w7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -250,6 +291,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/09/29/爬虫（2）/">爬虫（2）</a>
+          </li>
         
           <li>
             <a href="/2019/09/28/爬虫（1）/">爬虫（1）</a>
