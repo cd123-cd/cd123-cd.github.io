@@ -5,19 +5,19 @@
   
 
   
-  <title>爬虫（2） | Hexo</title>
+  <title>爬虫（5） | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="*URL管理器管理URL集合和已抓取的URL集合防止重复抓取，循环抓取需要支持的功能：1.添加新的URL到待爬取集合（2需要判断待添加URL是否在容器中）3同时也可以从容其中获取待爬取URL（4判断容器中还有没有待爬取的URL）（5如果URL爬取之后将URL从待爬取移动到已爬取）实现方式：1内存python-&amp;gt;待爬取URL集合set（），已爬取URL集合set（）2关系数据库MySQL-&amp;g">
+  <meta name="description" content="#网络解析器网络解析器：从网络中提取有价值的数据的工具HTML网页字符串-&amp;gt;网页解析器-&amp;gt;1价值数据2新URL列表Python网页解析器1正则表达式(模糊匹配)2html.parser3Beautiful Soup4lxml234是结构化解析dom树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="爬虫（2）">
-<meta property="og:url" content="http://yoursite.com/2019/09/29/爬虫（2）/index.html">
+<meta property="og:title" content="爬虫（5）">
+<meta property="og:url" content="http://yoursite.com/2019/10/02/爬虫（5）/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="*URL管理器管理URL集合和已抓取的URL集合防止重复抓取，循环抓取需要支持的功能：1.添加新的URL到待爬取集合（2需要判断待添加URL是否在容器中）3同时也可以从容其中获取待爬取URL（4判断容器中还有没有待爬取的URL）（5如果URL爬取之后将URL从待爬取移动到已爬取）实现方式：1内存python-&amp;gt;待爬取URL集合set（），已爬取URL集合set（）2关系数据库MySQL-&amp;g">
+<meta property="og:description" content="#网络解析器网络解析器：从网络中提取有价值的数据的工具HTML网页字符串-&amp;gt;网页解析器-&amp;gt;1价值数据2新URL列表Python网页解析器1正则表达式(模糊匹配)2html.parser3Beautiful Soup4lxml234是结构化解析dom树">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-29T15:23:02.498Z">
+<meta property="og:updated_time" content="2019-10-04T10:27:05.823Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="爬虫（2）">
-<meta name="twitter:description" content="*URL管理器管理URL集合和已抓取的URL集合防止重复抓取，循环抓取需要支持的功能：1.添加新的URL到待爬取集合（2需要判断待添加URL是否在容器中）3同时也可以从容其中获取待爬取URL（4判断容器中还有没有待爬取的URL）（5如果URL爬取之后将URL从待爬取移动到已爬取）实现方式：1内存python-&amp;gt;待爬取URL集合set（），已爬取URL集合set（）2关系数据库MySQL-&amp;g">
+<meta name="twitter:title" content="爬虫（5）">
+<meta name="twitter:description" content="#网络解析器网络解析器：从网络中提取有价值的数据的工具HTML网页字符串-&amp;gt;网页解析器-&amp;gt;1价值数据2新URL列表Python网页解析器1正则表达式(模糊匹配)2html.parser3Beautiful Soup4lxml234是结构化解析dom树">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-爬虫（2）" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-爬虫（5）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/09/29/爬虫（2）/" class="article-date">
-  <time datetime="2019-09-28T16:00:00.000Z" itemprop="datePublished">2019-09-29</time>
+    <a href="/2019/10/02/爬虫（5）/" class="article-date">
+  <time datetime="2019-10-01T16:00:00.000Z" itemprop="datePublished">2019-10-02</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      爬虫（2）
+      爬虫（5）
     </h1>
   
 
@@ -86,16 +86,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>*<em>URL管理器<br>管理URL集合和已抓取的URL集合防止重复抓取，循环抓取<br>需要支持的功能：1.添加新的URL到待爬取集合（2需要判断待添加URL是否在容器中）3同时也可以从容其中获取待爬取URL（4判断容器中还有没有待爬取的URL）（5如果URL爬取之后将URL从待爬取移动到已爬取）<br>实现方式：1内存python-&gt;待爬取URL集合set（），已爬取URL集合set（）<br>2关系数据库MySQL-&gt;urls(url,is_crawled)(永久存储)<br>3缓存数据库redis-&gt;待爬取URL集合set（），已爬取URL集合set（）<br>*</em>网页下载器<br>将互联网上URL对应的网页下载到本地的工具<br>网页下载器通过URL访问互联网，以HTML形式返回网页下载器存储成本地文件或内存自符串<br>Python的网页下载器</p>
-<ol>
-<li>urllib2—python官方基础模块<br>（1）.import    1</li>
-<li>requests—第三方包更强大</li>
-</ol>
+        <p>#网络解析器<br>网络解析器：从网络中提取有价值的数据的工具<br>HTML网页字符串-&gt;网页解析器-&gt;1价值数据2新URL列表<br>Python网页解析器<br>1正则表达式(模糊匹配)<br>2html.parser<br>3Beautiful Soup<br>4lxml<br>234是结构化解析dom树</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/29/爬虫（2）/" data-id="ck1bzl8xf00025stejkvebwqn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/02/爬虫（5）/" data-id="ck1bzl8xp00075sten60sst3s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -104,19 +100,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/09/30/爬虫（3）/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          爬虫（3）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/28/爬虫（1）/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/10/01/爬虫（4）/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">爬虫（1）</div>
+      <div class="article-nav-title">爬虫（4）</div>
     </a>
   
 </nav>
