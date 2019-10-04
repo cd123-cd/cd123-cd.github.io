@@ -5,19 +5,19 @@
   
 
   
-  <title>爬虫（4） | Hexo</title>
+  <title>爬虫（6） | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#urllib2实例代码演示#import urllib.request #直接请求url = “http://www.baidu.com&amp;quot;print(‘|第一种方法’)response1=urllib.request.urlopen(url) #获取状态码，如果是200表示获取成功print(response1.getcode()) #读取内容print(response1.read(">
+  <meta name="description" content="Beautiful Soup第三方库通过Cmd pip install beautifulsoup4 安装语法HTML 创建beautifulsoup对象-&amp;gt;搜索节点第一个符合条件的-&amp;gt;访问节点搜索节点时可以按节点按属性值按节点文字 #创建beautifulsoup对象from bs4 import BeautifulSoupsoup=BeautifulSoup(    html_do">
 <meta property="og:type" content="article">
-<meta property="og:title" content="爬虫（4）">
-<meta property="og:url" content="http://yoursite.com/2019/10/01/爬虫（4）/index.html">
+<meta property="og:title" content="爬虫（6）">
+<meta property="og:url" content="http://yoursite.com/2019/10/03/爬虫（6）/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#urllib2实例代码演示#import urllib.request #直接请求url = “http://www.baidu.com&amp;quot;print(‘|第一种方法’)response1=urllib.request.urlopen(url) #获取状态码，如果是200表示获取成功print(response1.getcode()) #读取内容print(response1.read(">
+<meta property="og:description" content="Beautiful Soup第三方库通过Cmd pip install beautifulsoup4 安装语法HTML 创建beautifulsoup对象-&amp;gt;搜索节点第一个符合条件的-&amp;gt;访问节点搜索节点时可以按节点按属性值按节点文字 #创建beautifulsoup对象from bs4 import BeautifulSoupsoup=BeautifulSoup(    html_do">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-03T00:57:20.790Z">
+<meta property="og:updated_time" content="2019-10-04T11:54:44.203Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="爬虫（4）">
-<meta name="twitter:description" content="#urllib2实例代码演示#import urllib.request #直接请求url = “http://www.baidu.com&amp;quot;print(‘|第一种方法’)response1=urllib.request.urlopen(url) #获取状态码，如果是200表示获取成功print(response1.getcode()) #读取内容print(response1.read(">
+<meta name="twitter:title" content="爬虫（6）">
+<meta name="twitter:description" content="Beautiful Soup第三方库通过Cmd pip install beautifulsoup4 安装语法HTML 创建beautifulsoup对象-&amp;gt;搜索节点第一个符合条件的-&amp;gt;访问节点搜索节点时可以按节点按属性值按节点文字 #创建beautifulsoup对象from bs4 import BeautifulSoupsoup=BeautifulSoup(    html_do">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-爬虫（4）" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-爬虫（6）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/10/01/爬虫（4）/" class="article-date">
-  <time datetime="2019-09-30T16:00:00.000Z" itemprop="datePublished">2019-10-01</time>
+    <a href="/2019/10/03/爬虫（6）/" class="article-date">
+  <time datetime="2019-10-02T16:00:00.000Z" itemprop="datePublished">2019-10-03</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      爬虫（4）
+      爬虫（6）
     </h1>
   
 
@@ -86,15 +86,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#urllib2实例代码演示#<br>import urllib.request</p>
-<p>#直接请求<br>url = “<a href="http://www.baidu.com&quot;" target="_blank" rel="noopener">http://www.baidu.com&quot;</a><br>print(‘|第一种方法’)<br>response1=urllib.request.urlopen(url)</p>
-<p>#获取状态码，如果是200表示获取成功<br>print(response1.getcode())</p>
-<p>#读取内容<br>print(response1.read())</p>
+        <p><em>Beautiful Soup</em><br>第三方库通过<br>Cmd pip install beautifulsoup4 安装<br>语法<br>HTML 创建beautifulsoup对象-&gt;搜索节点第一个符合条件的-&gt;访问节点<br>搜索节点时可以按节点按属性值按节点文字</p>
+<p>#创建beautifulsoup对象<br>from bs4 import BeautifulSoup<br>soup=BeautifulSoup(<br>    html_doc,#html文档字符串<br>    ‘html.parser’,#html解析器<br>    form_encoding=’utf8’#HTML文档的编码<br>)</p>
+<p>#搜索节点</p>
+<p>#方法：find——all(name,attrs,string)</p>
+<p>#查找所有节点为a的节点<br>soup.find_all(‘a’)</p>
+<p>#查找所有标签为a，链接符合/view/123.html形式的节点<br>soup。find_all(‘a’,href=’/view/123.html’)</p>
+<p>#查找所有标签为Div，class为adc,文字为python的节点<br>soup.find_all(‘div’,class_=’abc’,string=’python’)</p>
+<p>#访问节点信息</p>
+<p>#得到节点：<a href="1.html">python</a></p>
+<p>#获取查找到的节点的标签名称<br>node.name</p>
+<p>#获取查找到a节点的href属性<br>node[‘href’]</p>
+<p>#获取查找到的a节点的链接文字<br>node.get_text()<br>eg: from bs4 import BeautifulSoup</p>
+<p>html_doc = “””</p>
+<html><head><meta name="generator" content="Hexo 3.9.0"><title>The Dormouse's story</title></head>
+<body>
+<p class="title"><b>The Dormouse's story</b></p>
 
+<p class="story">Once upon a time there were three little sisters; and their names were
+<a href="http://example.com/elsie" class="sister" id="link1" target="_blank" rel="noopener">Elsie</a>,
+<a href="http://example.com/lacie" class="sister" id="link2" target="_blank" rel="noopener">Lacie</a> and
+<a href="http://example.com/tillie" class="sister" id="link3" target="_blank" rel="noopener">Tillie</a>;
+and they lived at the bottom of a well.</p>
+
+<p class="story">...</p>
+"""
+soup = BeautifulSoup(html_doc,'html.parser',from_encoding='uft-8')
+print("获取所有链接")
+links=soup.find_all('a')
+for link in links:
+    print(link.name,link['href'],link.get_text())
+结果：获取所有链接
+a http://example.com/elsie Elsie
+a http://example.com/lacie Lacie
+a http://example.com/tillie Tillie
+</body></html>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/01/爬虫（4）/" data-id="ck1c2o2rg0006nkteaqeiezd6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/03/爬虫（6）/" data-id="ck1c2o2rh0007nktemuskh27c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -103,19 +133,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/10/02/爬虫（5）/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          爬虫（5）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/30/爬虫（3）/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/10/02/爬虫（5）/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">爬虫（3）</div>
+      <div class="article-nav-title">爬虫（5）</div>
     </a>
   
 </nav>
