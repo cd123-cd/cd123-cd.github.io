@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>爬虫（7） | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="实例爬虫1确定目标2分析目标(1)    URL格式(2)    数据格式(3)    网页编码3编写代码4执行爬虫目标：百度百科python词条相关词条网页-标题简介入口页：http://baike.daidu.com/view/21087.htmURL格式：词条页面URL：/view/125370.htm数据格式：标题： *** 简介： *** 页面编码：UTF-8 实例化 首先建立一个包ba">
+<meta property="og:type" content="article">
+<meta property="og:title" content="爬虫（7）">
+<meta property="og:url" content="http://yoursite.com/2019/10/04/爬虫（7）/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="实例爬虫1确定目标2分析目标(1)    URL格式(2)    数据格式(3)    网页编码3编写代码4执行爬虫目标：百度百科python词条相关词条网页-标题简介入口页：http://baike.daidu.com/view/21087.htmURL格式：词条页面URL：/view/125370.htm数据格式：标题： *** 简介： *** 页面编码：UTF-8 实例化 首先建立一个包ba">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-05T06:26:02.474Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="爬虫（7）">
+<meta name="twitter:description" content="实例爬虫1确定目标2分析目标(1)    URL格式(2)    数据格式(3)    网页编码3编写代码4执行爬虫目标：百度百科python词条相关词条网页-标题简介入口页：http://baike.daidu.com/view/21087.htmURL格式：词条页面URL：/view/125370.htm数据格式：标题： *** 简介： *** 页面编码：UTF-8 实例化 首先建立一个包ba">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-爬虫（7）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/04/爬虫（7）/" class="article-date">
+  <time datetime="2019-10-03T16:00:00.000Z" itemprop="datePublished">2019-10-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      爬虫（7）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>实例爬虫<br>1确定目标<br>2分析目标<br>(1)    URL格式<br>(2)    数据格式<br>(3)    网页编码<br>3编写代码<br>4执行爬虫<br>目标：百度百科python词条相关词条网页-标题简介<br>入口页：<a href="http://baike.daidu.com/view/21087.htm" target="_blank" rel="noopener">http://baike.daidu.com/view/21087.htm</a><br>URL格式：<br>词条页面URL：/view/125370.htm<br>数据格式：<br>标题：</p>
+<dd class="”lemmaWgt-lemmaTitle-title”"><h1>***<dd>
+简介：
+<div class="”lemma-summary”">***<div>
+页面编码：UTF-8
+实例化
+首先建立一个包baike_spider
+这个包里面要建立6个文件1.__init__.py 2.spider_main.py 3.url_manager.py 4.html_downloader.py 5.html_parser.py 6.html_outputer.py
+1.__init__.py什么都不用写，他的作用就是确保baike_spider是个包
+2.spider_main.py
+import url_manager
+import html_downloader
+import html_parser
+import html_outputer
+class SpiderMain(object):
+    def __init__(self):
+        self.urls=url_manager.UrlManager()
+        self.downloader=html_downloader.HtmlDownloader()
+        self.parser=html_parser.HtmlParser()
+        self.outputer=html_outputer.HtmlOutputer()
+    def craw(self,root_url):
+        count=1
+        self.urls.add_new_url(root_url)
+        while self.urls.has_new_url():
+            try:
+                new_url=self.urls.get_new_url()
+                print("craw %d:%s"%(count,new_url))
+                html_cont=self.downloader.download(new_url)
+                new_urls,new_data=self.parser.parse(new_url,html_cont)
+                self.urls.add_new_urls(new_urls)
+                self.outputer.collect_data(new_data)
+                if count==10:
+                    break
+                count=count+1
+            except:
+                print("craw failed")
+        self.outputer.output_html()
+if __name__=="__main__":
+    root_url = "https://baike.baidu.com/item/Python/407313"
+    obj_spider=SpiderMain()
+    obj_spider.craw(root_url)
+
+<ol start="3">
+<li>url_manager.py</li>
+<li>class UrlManager(object):</li>
+<li>def <strong>init</strong>(self):</li>
+<li>self.new_urls=set()</li>
+<li>self.old_urls=set()</li>
+<li>def add_new_url(self,url):</li>
+<li>if url is None:</li>
+<li>return</li>
+<li>if url not in self.new_urls and url not in self.old_urls:</li>
+<li>self.new_urls.add(url)</li>
+<li></li>
+<li>def add_new_urls(self,urls):</li>
+<li>if urls is None or len(urls)==0:</li>
+<li>return</li>
+<li>for url in urls:</li>
+<li>#self.add_new_url(url)</li>
+<li>self.new_urls.add(url)</li>
+<li>def has_new_url(self):</li>
+<li>return len(self.new_urls)!=0</li>
+<li></li>
+<li>def get_new_url(self):</li>
+<li>new_url=self.new_urls.pop()</li>
+<li>self.old_urls.add(new_url)</li>
+<li>return new_url</li>
+<li></li>
+<li>html_downloader.py<br>import urllib.request<br>class HtmlDownloader(object):<br> def download(self,url):<pre><code>if url is None:
+    return None
+response=urllib.request.urlopen(url)
+if response.getcode()!=200:
+    return None
+return response.read()</code></pre></li>
+</ol>
+<ol start="5">
+<li>html_parser.py<br>from bs4 import BeautifulSoup<br>import re</li>
+</ol>
+<p>from urllib.parse import urljoin<br>class HtmlParser(object):<br>    def <em>get_new_urls(self,page_url,soup):<br>        new_urls=set()<br>        links = soup.find_all(‘a’, href=re.compile(r”/item/“))  # item/Python/407313.htm<br>        for link in links:<br>            new_url=link[‘href’]<br>            #new_full_url=urlparse.urljoin(page_url,new_url)<br>            new_full_url = urljoin(page_url, new_url)<br>            new_urls.add(new_full_url)<br>        return new_urls<br>    def _get_new_data(self,page_url,soup):<br>        res_data = {“url”:page_url}  # <dd class="lemmaWgt-lemmaTitle-title"><h1>Python</h1><br>        #res_data[‘url’]=page_url<br><br>        title_node=soup.find(‘dd’,class</dd></em>=”lemmaWgt-lemmaTitle-title”).find(“h1”)<br>        res_data[‘title’]=title_node.get_text()<br>        #<div class="lemma-summary" label-module="lemmaSummary"><br><br>        summary_node=soup.find(‘div’,class_=”lemma-summary”)<br>        res_data[‘summary’]=summary_node.get_text()<br>        return res_data<br>    def parse(self,page_url,html_cont):<br>        if page_url is None or html_cont is None:<br>            return<br>        soup=BeautifulSoup(html_cont,’html.parser’,from_encoding=’utf-8’)<br>        new_urls=self._get_new_urls(page_url,soup)<br>        new_data=self._get_new_data(page_url,soup)<br>        return new_urls,new_data</div></p>
+<p>6.html_outputer.py<br>class HtmlOutputer(object):<br>    def <strong>init</strong>(self):<br>        self.datas=[]</p>
+<pre><code>def collect_data(self,data):
+    if data is None:
+        return
+    self.datas.append(data)
+def output_html(self):
+    fout=open(&apos;output.html&apos;,&apos;w&apos;,encoding=&apos;utf-8&apos;)
+    fout.write(&quot;&lt;html&gt;&quot;)
+    fout.write(&quot;&lt;meta charset=&apos;utf-8&apos;&gt;&quot;)
+    fout.write(&quot;&lt;body&gt;&quot;)
+    fout.write(&quot;&lt;table&gt;&quot;)
+    for data in self.datas:
+        fout.write(&quot;&lt;tr&gt;&quot;)
+        fout.write(&quot;&lt;td&gt;%s&lt;/td&gt;&quot; % data[&apos;url&apos;])
+        fout.write(&quot;&lt;td&gt;%s&lt;/td&gt;&quot; % data[&apos;title&apos;])
+        fout.write(&quot;&lt;td&gt;%s&lt;/td&gt;&quot; % data[&apos;summary&apos;])
+        fout.write(&quot;&lt;/tr&gt;&quot;)
+    fout.write(&quot;&lt;/table&gt;&quot;)
+    fout.write(&quot;&lt;/body&gt;&quot;)
+    fout.write(&quot;&lt;/html&gt;&quot;)
+    fout.close()</code></pre><p>*注意：当几个文件建成，会自动出现<strong>pycache</strong>这样的文件，是正常的，这点玩意给我写的，好多bug，参考<a href="https://blog.csdn.net/qq_38520096/article/details/79189161" target="_blank" rel="noopener">https://blog.csdn.net/qq_38520096/article/details/79189161</a> *</p>
+</div></div></dd></h1></dd>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/04/爬虫（7）/" data-id="ck1d6do5e0009g4teqqb7wa7m" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/03/爬虫（6）/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">爬虫（6）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/04/爬虫（7）/">爬虫（7）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/03/爬虫（6）/">爬虫（6）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/02/爬虫（5）/">爬虫（5）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/01/爬虫（4）/">爬虫（4）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/30/爬虫（3）/">爬虫（3）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
