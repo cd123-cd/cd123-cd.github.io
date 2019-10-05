@@ -7,17 +7,17 @@
   
   <title>爬虫（7） | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="实例爬虫1确定目标2分析目标(1)    URL格式(2)    数据格式(3)    网页编码3编写代码4执行爬虫目标：百度百科python词条相关词条网页-标题简介入口页：http://baike.daidu.com/view/21087.htmURL格式：词条页面URL：/view/125370.htm数据格式：标题： *** 简介： *** 页面编码：UTF-8 实例化 首先建立一个包ba">
+  <meta name="description" content="实例爬虫1确定目标2分析目标(1)    URL格式(2)    数据格式(3)    网页编码3编写代码4执行爬虫目标：百度百科python词条相关词条网页-标题简介入口页：http://baike.daidu.com/view/21087.htmURL格式：词条页面URL：/view/125370.htm数据格式：标题： 简介：页面编码：UTF-8实例化首先建立一个包baike_spider这">
 <meta property="og:type" content="article">
 <meta property="og:title" content="爬虫（7）">
 <meta property="og:url" content="http://yoursite.com/2019/10/04/爬虫（7）/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="实例爬虫1确定目标2分析目标(1)    URL格式(2)    数据格式(3)    网页编码3编写代码4执行爬虫目标：百度百科python词条相关词条网页-标题简介入口页：http://baike.daidu.com/view/21087.htmURL格式：词条页面URL：/view/125370.htm数据格式：标题： *** 简介： *** 页面编码：UTF-8 实例化 首先建立一个包ba">
+<meta property="og:description" content="实例爬虫1确定目标2分析目标(1)    URL格式(2)    数据格式(3)    网页编码3编写代码4执行爬虫目标：百度百科python词条相关词条网页-标题简介入口页：http://baike.daidu.com/view/21087.htmURL格式：词条页面URL：/view/125370.htm数据格式：标题： 简介：页面编码：UTF-8实例化首先建立一个包baike_spider这">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-05T06:26:02.474Z">
+<meta property="og:updated_time" content="2019-10-05T06:41:11.708Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="爬虫（7）">
-<meta name="twitter:description" content="实例爬虫1确定目标2分析目标(1)    URL格式(2)    数据格式(3)    网页编码3编写代码4执行爬虫目标：百度百科python词条相关词条网页-标题简介入口页：http://baike.daidu.com/view/21087.htmURL格式：词条页面URL：/view/125370.htm数据格式：标题： *** 简介： *** 页面编码：UTF-8 实例化 首先建立一个包ba">
+<meta name="twitter:description" content="实例爬虫1确定目标2分析目标(1)    URL格式(2)    数据格式(3)    网页编码3编写代码4执行爬虫目标：百度百科python词条相关词条网页-标题简介入口页：http://baike.daidu.com/view/21087.htmURL格式：词条页面URL：/view/125370.htm数据格式：标题： 简介：页面编码：UTF-8实例化首先建立一个包baike_spider这">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -87,74 +87,26 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>实例爬虫<br>1确定目标<br>2分析目标<br>(1)    URL格式<br>(2)    数据格式<br>(3)    网页编码<br>3编写代码<br>4执行爬虫<br>目标：百度百科python词条相关词条网页-标题简介<br>入口页：<a href="http://baike.daidu.com/view/21087.htm" target="_blank" rel="noopener">http://baike.daidu.com/view/21087.htm</a><br>URL格式：<br>词条页面URL：/view/125370.htm<br>数据格式：<br>标题：</p>
-<dd class="”lemmaWgt-lemmaTitle-title”"><h1>***<dd>
-简介：
-<div class="”lemma-summary”">***<div>
-页面编码：UTF-8
-实例化
-首先建立一个包baike_spider
-这个包里面要建立6个文件1.__init__.py 2.spider_main.py 3.url_manager.py 4.html_downloader.py 5.html_parser.py 6.html_outputer.py
-1.__init__.py什么都不用写，他的作用就是确保baike_spider是个包
-2.spider_main.py
-import url_manager
-import html_downloader
-import html_parser
-import html_outputer
-class SpiderMain(object):
-    def __init__(self):
-        self.urls=url_manager.UrlManager()
-        self.downloader=html_downloader.HtmlDownloader()
-        self.parser=html_parser.HtmlParser()
-        self.outputer=html_outputer.HtmlOutputer()
-    def craw(self,root_url):
-        count=1
-        self.urls.add_new_url(root_url)
-        while self.urls.has_new_url():
-            try:
-                new_url=self.urls.get_new_url()
-                print("craw %d:%s"%(count,new_url))
-                html_cont=self.downloader.download(new_url)
-                new_urls,new_data=self.parser.parse(new_url,html_cont)
-                self.urls.add_new_urls(new_urls)
-                self.outputer.collect_data(new_data)
-                if count==10:
-                    break
-                count=count+1
-            except:
-                print("craw failed")
-        self.outputer.output_html()
-if __name__=="__main__":
-    root_url = "https://baike.baidu.com/item/Python/407313"
-    obj_spider=SpiderMain()
-    obj_spider.craw(root_url)
-
+<p>简介：<br>页面编码：UTF-8<br>实例化<br>首先建立一个包baike_spider<br>这个包里面要建立6个文件1.<strong>init</strong>.py 2.spider_main.py 3.url_manager.py 4.html_downloader.py 5.html_parser.py 6.html_outputer.py<br>1.<strong>init</strong>.py什么都不用写，他的作用就是确保baike_spider是个包<br>2.spider_main.py<br>import url_manager<br>import html_downloader<br>import html_parser<br>import html_outputer<br>class SpiderMain(object):<br>    def <strong>init</strong>(self):<br>        self.urls=url_manager.UrlManager()<br>        self.downloader=html_downloader.HtmlDownloader()<br>        self.parser=html_parser.HtmlParser()<br>        self.outputer=html_outputer.HtmlOutputer()<br>    def craw(self,root_url):<br>        count=1<br>        self.urls.add_new_url(root_url)<br>        while self.urls.has_new_url():<br>            try:<br>                new_url=self.urls.get_new_url()<br>                print(“craw %d:%s”%(count,new_url))<br>                html_cont=self.downloader.download(new_url)<br>                new_urls,new_data=self.parser.parse(new_url,html_cont)<br>                self.urls.add_new_urls(new_urls)<br>                self.outputer.collect_data(new_data)<br>                if count==10:<br>                    break<br>                count=count+1<br>            except:<br>                print(“craw failed”)<br>        self.outputer.output_html()<br>if <strong>name</strong>==”<strong>main</strong>“:<br>    root_url = “<a href="https://baike.baidu.com/item/Python/407313&quot;" target="_blank" rel="noopener">https://baike.baidu.com/item/Python/407313&quot;</a><br>    obj_spider=SpiderMain()<br>    obj_spider.craw(root_url)</p>
 <ol start="3">
-<li>url_manager.py</li>
-<li>class UrlManager(object):</li>
-<li>def <strong>init</strong>(self):</li>
-<li>self.new_urls=set()</li>
-<li>self.old_urls=set()</li>
-<li>def add_new_url(self,url):</li>
-<li>if url is None:</li>
-<li>return</li>
-<li>if url not in self.new_urls and url not in self.old_urls:</li>
-<li>self.new_urls.add(url)</li>
-<li></li>
-<li>def add_new_urls(self,urls):</li>
-<li>if urls is None or len(urls)==0:</li>
-<li>return</li>
-<li>for url in urls:</li>
-<li>#self.add_new_url(url)</li>
-<li>self.new_urls.add(url)</li>
-<li>def has_new_url(self):</li>
-<li>return len(self.new_urls)!=0</li>
-<li></li>
-<li>def get_new_url(self):</li>
-<li>new_url=self.new_urls.pop()</li>
-<li>self.old_urls.add(new_url)</li>
-<li>return new_url</li>
-<li></li>
-<li>html_downloader.py<br>import urllib.request<br>class HtmlDownloader(object):<br> def download(self,url):<pre><code>if url is None:
+<li><p>url_manager.py<br>class UrlManager(object):<br>  def <strong>init</strong>(self):</p>
+<pre><code>self.new_urls=set()
+self.old_urls=set()</code></pre><p>  def add_new_url(self,url):</p>
+<pre><code>if url is None:
+    return
+if url not in self.new_urls and url not in self.old_urls:
+    self.new_urls.add(url)</code></pre><p>  def add_new_urls(self,urls):</p>
+<pre><code>if urls is None or len(urls)==0:
+    return
+for url in urls:
+    #self.add_new_url(url)
+    self.new_urls.add(url)</code></pre><p>  def has_new_url(self):</p>
+<pre><code>return len(self.new_urls)!=0</code></pre><p>  def get_new_url(self):</p>
+<pre><code>new_url=self.new_urls.pop()
+self.old_urls.add(new_url)
+return new_url</code></pre></li>
+<li><p>html_downloader.py<br>import urllib.request<br>class HtmlDownloader(object):<br> def download(self,url):</p>
+<pre><code>if url is None:
     return None
 response=urllib.request.urlopen(url)
 if response.getcode()!=200:
@@ -186,11 +138,11 @@ def output_html(self):
     fout.write(&quot;&lt;/body&gt;&quot;)
     fout.write(&quot;&lt;/html&gt;&quot;)
     fout.close()</code></pre><p>*注意：当几个文件建成，会自动出现<strong>pycache</strong>这样的文件，是正常的，这点玩意给我写的，好多bug，参考<a href="https://blog.csdn.net/qq_38520096/article/details/79189161" target="_blank" rel="noopener">https://blog.csdn.net/qq_38520096/article/details/79189161</a> *</p>
-</div></div></dd></h1></dd>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/04/爬虫（7）/" data-id="ck1d6do5e0009g4teqqb7wa7m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/04/爬虫（7）/" data-id="ck1d6w2ro0009hgte7o2q8vn6" class="article-share-link">Share</a>
       
       
     </footer>
