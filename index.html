@@ -62,6 +62,67 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-爬虫（8）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/20/爬虫（8）/" class="article-date">
+  <time datetime="2019-10-19T16:00:00.000Z" itemprop="datePublished">2019-10-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/20/爬虫（8）/">爬虫（8）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>好久都没写博客了<br>每天，要么被骂，要么就在被骂的路上<br>今天说说pymysql吧，也做了好久了，终于搞明白了，我真的太难了<br>今天拿学长发给我的一个，试了一下，结果失败了，我都崩溃了，真的，捯饬好长时间，<br>一直都没成，运行没毛病，但是数据库一直都没有数据更新，但后来我百度查了一下<br>是我mysql引擎错了，将数据库引擎由 Innodb换成MyISAM</p>
+<h1 id="谢谢这个大哥的博客https-blog-csdn-net-duchang110-article-details-100168641"><a href="#谢谢这个大哥的博客https-blog-csdn-net-duchang110-article-details-100168641" class="headerlink" title="谢谢这个大哥的博客https://blog.csdn.net/duchang110/article/details/100168641"></a>谢谢这个大哥的博客<a href="https://blog.csdn.net/duchang110/article/details/100168641" target="_blank" rel="noopener">https://blog.csdn.net/duchang110/article/details/100168641</a></h1><h2 id="要不然今天插入的数据，明天才会出现"><a href="#要不然今天插入的数据，明天才会出现" class="headerlink" title="要不然今天插入的数据，明天才会出现"></a>要不然今天插入的数据，明天才会出现</h2><p>import pymysql</p>
+<p>conn = pymysql.connect(host=’localhost’, user=’root’,<br>                       password=’cd426426426’, db=’dbforpymysql’, charset=’utf8mb4’)<br>cur = conn.cursor()<br>class HtmlOutputer():</p>
+<pre><code>def __init__(self):
+    self.datas=[]
+
+def collect_data(self,data):
+    if data is None:
+        return
+    self.datas.append(data)
+
+def output_html(self):
+    for data in self.datas:
+
+
+
+        # sql = &quot;insert into userinfo(url) values(&apos;%s&apos;);&quot; % (str(data[&apos;url&apos;]))
+        # cur.execute(sql)
+        # sql = &quot;insert into userinfo(title) values(&apos;%s&apos;);&quot; % (str(data[&apos;title&apos;]))
+        # cur.execute(sql)
+        # sql = &quot;insert into userinfo(summary) values(&apos;%s&apos;);&quot; % (str(data[&apos;summary&apos;]))
+        sql = &quot;insert into userinfo(url,title,summary) values(&apos;%s&apos;,&apos;%s&apos;,&apos;%s&apos;)&quot; % (data[&apos;url&apos;], data[&apos;title&apos;],data[&apos;summary&apos;])
+        cur.execute(sql)
+    conn.close()</code></pre><hr>
+<p>出现的问题有：<br>1引擎问题<br>2execute()<br>3哎，好多问题呢，</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/20/爬虫（8）/" data-id="ck1z0r1tn0007b0tewtx2krqk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-爬虫（7）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/10/04/爬虫（7）/" class="article-date">
@@ -140,7 +201,7 @@ def output_html(self):
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/04/爬虫（7）/" data-id="ck1d6w2ro0009hgte7o2q8vn6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/04/爬虫（7）/" data-id="ck1z0r1tr000ab0tef171rlmw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -210,7 +271,7 @@ a http://example.com/tillie Tillie
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/03/爬虫（6）/" data-id="ck1d6w2rl0008hgtezljp46io" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/03/爬虫（6）/" data-id="ck1z0r1to0008b0teo6ha939w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -247,7 +308,7 @@ a http://example.com/tillie Tillie
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/02/爬虫（5）/" data-id="ck1d6w2rd0005hgtesor4lgji" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/02/爬虫（5）/" data-id="ck1z0r1ta0004b0teq5xy8v8d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -287,7 +348,7 @@ a http://example.com/tillie Tillie
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/01/爬虫（4）/" data-id="ck1d6w2rj0007hgtew8vmezoc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/01/爬虫（4）/" data-id="ck1z0r1t80003b0tep8dtmb3z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -326,7 +387,7 @@ a http://example.com/tillie Tillie
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/30/爬虫（3）/" data-id="ck1d6w2rg0006hgtezwd99avx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/30/爬虫（3）/" data-id="ck1z0r1t70002b0teqwlwiupw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -367,7 +428,7 @@ a http://example.com/tillie Tillie
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/29/爬虫（2）/" data-id="ck1d6w2qv0001hgte9896zcuo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/29/爬虫（2）/" data-id="ck1z0r1tc0006b0tebfpm3nva" class="article-share-link">Share</a>
       
       
     </footer>
@@ -404,7 +465,7 @@ a http://example.com/tillie Tillie
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/28/爬虫（1）/" data-id="ck1d6w2ra0004hgtewb7qtz3j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/28/爬虫（1）/" data-id="ck1z0r1tq0009b0tehgo4wfzq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -441,7 +502,7 @@ a http://example.com/tillie Tillie
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/24/blog-搭建/" data-id="ck1d6w2qh0000hgteeyin4dpr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/24/blog-搭建/" data-id="ck1z0r1t10000b0teemlv9ido" class="article-share-link">Share</a>
       
       
     </footer>
@@ -477,56 +538,7 @@ a http://example.com/tillie Tillie
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/22/我的第一篇博客文章/" data-id="ck1d6w2r60003hgterb6dbwt0" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/22/hello-world/" class="article-date">
-  <time datetime="2019-09-22T10:40:29.665Z" itemprop="datePublished">2019-09-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/22/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/22/hello-world/" data-id="ck1d6w2r10002hgteilxlpy3s" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/22/我的第一篇博客文章/" data-id="ck1z0r1t60001b0teza4zti70" class="article-share-link">Share</a>
       
       
     </footer>
@@ -537,6 +549,11 @@ a http://example.com/tillie Tillie
 
   
 
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
 
 </section>
         
@@ -567,6 +584,10 @@ a http://example.com/tillie Tillie
       <ul>
         
           <li>
+            <a href="/2019/10/20/爬虫（8）/">爬虫（8）</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/04/爬虫（7）/">爬虫（7）</a>
           </li>
         
@@ -580,10 +601,6 @@ a http://example.com/tillie Tillie
         
           <li>
             <a href="/2019/10/01/爬虫（4）/">爬虫（4）</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/30/爬虫（3）/">爬虫（3）</a>
           </li>
         
       </ul>
