@@ -62,6 +62,44 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-音乐下载器（一）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/19/音乐下载器（一）/" class="article-date">
+  <time datetime="2019-12-18T16:00:00.000Z" itemprop="datePublished">2019-12-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/19/音乐下载器（一）/">音乐下载器（一）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天，不对应该是昨天，为了六行代码差点没搞死，以至于现在凌晨两点四十还在这查百度，哈哈骗人的啦，失恋了睡不着，就打打代码吧<br>这个程序是跟着b站学的<a href="https://www.bilibili.com/video/av77225642?t=935" target="_blank" rel="noopener">https://www.bilibili.com/video/av77225642?t=935</a><br>出现三个问题<br>报错1：<br>FileNotFoundError: [WinError 2] 系统找不到指定的文件。<br>解决办法找到lib中的subprocess.py文件<br>把 <strong>init</strong>函数中的shell=False改成shell=True<br>我也是百度查的具体参考<a href="https://blog.csdn.net/qq_43403025/article/details/100023633" target="_blank" rel="noopener">https://blog.csdn.net/qq_43403025/article/details/100023633</a><br>我的源代码此时是这样的</p>
+<p>#自动化框架<br>from selenium import webdriver<br>import time<br>driver = webdriver.Chrome()<br>url = r’https:\y.qq.com\portal\search.html#page=1&amp;searchid=1&amp;remoteplace=txt.yqq.top&amp;t=song&amp;w=%E4%BC%A4%E5%BF%83%E5%A4%AA%E5%B9%B3%E6%B4%8B’<br>driver.get(url)<br>报错二：<br>selenium.common.exceptions.WebDriverException: Message: ‘chromedriver’ executable needs to be in PATH. Please see <a href="https://sites.google.com/a/chromium.org/chromedriver/home" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/home</a><br>这是因为我没装驱动，此时你要做的是查一下你的谷歌版本，然后下载对应驱动，保存在chrome下就可以了<br>参考<a href="https://blog.csdn.net/qq_42711815/article/details/89558107" target="_blank" rel="noopener">https://blog.csdn.net/qq_42711815/article/details/89558107</a><br>源文件和上面一样没改<br>你以为这样就结束了吗？no<br>报错三：<br>selenium.common.exceptions.WebDriverException: Message: Service chromedriver unexpectedly exited. Status code was: 1<br>我把文件刚下好的驱动路径放进去就可以了<br>源代码：<br>from selenium import webdriver<br>import time<br>driver = webdriver.Chrome(r’C:\Users\LEGION\AppData\Local\Programs\Python\Python37-32\Lib\site-packages\selenium\webdriver\chrome\chromedriver.exe’)<br>url = r’https:\y.qq.com\portal\search.html#page=1&amp;searchid=1&amp;remoteplace=txt.yqq.top&amp;t=song&amp;w=%E4%BC%A4%E5%BF%83%E5%A4%AA%E5%B9%B3%E6%B4%8B’<br>driver.get(url)<br>友情提示1.路径用反斜杠 2.记得路径前加r要不然编码错误</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/19/音乐下载器（一）/" data-id="ck4bo2lo4000ai0tewwtx3xu0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-爬虫（8）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/10/20/爬虫（8）/" class="article-date">
@@ -113,7 +151,7 @@ def output_html(self):
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/20/爬虫（8）/" data-id="ck1z0r1tn0007b0tewtx2krqk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/20/爬虫（8）/" data-id="ck4bo2lo20009i0te93i6hyp2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -201,7 +239,7 @@ def output_html(self):
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/04/爬虫（7）/" data-id="ck1z0r1tr000ab0tef171rlmw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/04/爬虫（7）/" data-id="ck4bo2lo6000bi0tearjg4961" class="article-share-link">Share</a>
       
       
     </footer>
@@ -271,7 +309,7 @@ a http://example.com/tillie Tillie
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/03/爬虫（6）/" data-id="ck1z0r1to0008b0teo6ha939w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/03/爬虫（6）/" data-id="ck4bo2lnx0006i0te1ab32ev0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -308,7 +346,7 @@ a http://example.com/tillie Tillie
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/02/爬虫（5）/" data-id="ck1z0r1ta0004b0teq5xy8v8d" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/02/爬虫（5）/" data-id="ck4bo2lnf0004i0tei3a8xu2o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -348,7 +386,7 @@ a http://example.com/tillie Tillie
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/01/爬虫（4）/" data-id="ck1z0r1t80003b0tep8dtmb3z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/01/爬虫（4）/" data-id="ck4bo2lnb0003i0tedauiqsy4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -387,7 +425,7 @@ a http://example.com/tillie Tillie
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/30/爬虫（3）/" data-id="ck1z0r1t70002b0teqwlwiupw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/30/爬虫（3）/" data-id="ck4bo2ln40001i0te3ueq8a91" class="article-share-link">Share</a>
       
       
     </footer>
@@ -428,7 +466,7 @@ a http://example.com/tillie Tillie
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/29/爬虫（2）/" data-id="ck1z0r1tc0006b0tebfpm3nva" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/29/爬虫（2）/" data-id="ck4bo2lnz0007i0te3oc4q2i1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -465,7 +503,7 @@ a http://example.com/tillie Tillie
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/28/爬虫（1）/" data-id="ck1z0r1tq0009b0tehgo4wfzq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/28/爬虫（1）/" data-id="ck4bo2lo00008i0te51io40gj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -502,43 +540,7 @@ a http://example.com/tillie Tillie
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/24/blog-搭建/" data-id="ck1z0r1t10000b0teemlv9ido" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-我的第一篇博客文章" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/22/我的第一篇博客文章/" class="article-date">
-  <time datetime="2019-09-22T10:46:13.000Z" itemprop="datePublished">2019-09-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/22/我的第一篇博客文章/">我的第一篇博客文章</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/22/我的第一篇博客文章/" data-id="ck1z0r1t60001b0teza4zti70" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/24/blog-搭建/" data-id="ck4bo2ln70002i0te1ol2bv1l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -571,7 +573,7 @@ a http://example.com/tillie Tillie
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
     </div>
   </div>
 
@@ -582,6 +584,10 @@ a http://example.com/tillie Tillie
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/12/19/音乐下载器（一）/">音乐下载器（一）</a>
+          </li>
         
           <li>
             <a href="/2019/10/20/爬虫（8）/">爬虫（8）</a>
@@ -597,10 +603,6 @@ a http://example.com/tillie Tillie
         
           <li>
             <a href="/2019/10/02/爬虫（5）/">爬虫（5）</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/01/爬虫（4）/">爬虫（4）</a>
           </li>
         
       </ul>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>音乐下载器（一） | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="今天，不对应该是昨天，为了六行代码差点没搞死，以至于现在凌晨两点四十还在这查百度，哈哈骗人的啦，失恋了睡不着，就打打代码吧这个程序是跟着b站学的https://www.bilibili.com/video/av77225642?t=935出现三个问题报错1：FileNotFoundError: [WinError 2] 系统找不到指定的文件。解决办法找到lib中的subprocess.py文件把">
+<meta property="og:type" content="article">
+<meta property="og:title" content="音乐下载器（一）">
+<meta property="og:url" content="http://yoursite.com/2019/12/19/音乐下载器（一）/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="今天，不对应该是昨天，为了六行代码差点没搞死，以至于现在凌晨两点四十还在这查百度，哈哈骗人的啦，失恋了睡不着，就打打代码吧这个程序是跟着b站学的https://www.bilibili.com/video/av77225642?t=935出现三个问题报错1：FileNotFoundError: [WinError 2] 系统找不到指定的文件。解决办法找到lib中的subprocess.py文件把">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-12-18T19:05:12.842Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="音乐下载器（一）">
+<meta name="twitter:description" content="今天，不对应该是昨天，为了六行代码差点没搞死，以至于现在凌晨两点四十还在这查百度，哈哈骗人的啦，失恋了睡不着，就打打代码吧这个程序是跟着b站学的https://www.bilibili.com/video/av77225642?t=935出现三个问题报错1：FileNotFoundError: [WinError 2] 系统找不到指定的文件。解决办法找到lib中的subprocess.py文件把">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-音乐下载器（一）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/19/音乐下载器（一）/" class="article-date">
+  <time datetime="2019-12-18T16:00:00.000Z" itemprop="datePublished">2019-12-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      音乐下载器（一）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天，不对应该是昨天，为了六行代码差点没搞死，以至于现在凌晨两点四十还在这查百度，哈哈骗人的啦，失恋了睡不着，就打打代码吧<br>这个程序是跟着b站学的<a href="https://www.bilibili.com/video/av77225642?t=935" target="_blank" rel="noopener">https://www.bilibili.com/video/av77225642?t=935</a><br>出现三个问题<br>报错1：<br>FileNotFoundError: [WinError 2] 系统找不到指定的文件。<br>解决办法找到lib中的subprocess.py文件<br>把 <strong>init</strong>函数中的shell=False改成shell=True<br>我也是百度查的具体参考<a href="https://blog.csdn.net/qq_43403025/article/details/100023633" target="_blank" rel="noopener">https://blog.csdn.net/qq_43403025/article/details/100023633</a><br>我的源代码此时是这样的</p>
+<p>#自动化框架<br>from selenium import webdriver<br>import time<br>driver = webdriver.Chrome()<br>url = r’https:\y.qq.com\portal\search.html#page=1&amp;searchid=1&amp;remoteplace=txt.yqq.top&amp;t=song&amp;w=%E4%BC%A4%E5%BF%83%E5%A4%AA%E5%B9%B3%E6%B4%8B’<br>driver.get(url)<br>报错二：<br>selenium.common.exceptions.WebDriverException: Message: ‘chromedriver’ executable needs to be in PATH. Please see <a href="https://sites.google.com/a/chromium.org/chromedriver/home" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/home</a><br>这是因为我没装驱动，此时你要做的是查一下你的谷歌版本，然后下载对应驱动，保存在chrome下就可以了<br>参考<a href="https://blog.csdn.net/qq_42711815/article/details/89558107" target="_blank" rel="noopener">https://blog.csdn.net/qq_42711815/article/details/89558107</a><br>源文件和上面一样没改<br>你以为这样就结束了吗？no<br>报错三：<br>selenium.common.exceptions.WebDriverException: Message: Service chromedriver unexpectedly exited. Status code was: 1<br>我把文件刚下好的驱动路径放进去就可以了<br>源代码：<br>from selenium import webdriver<br>import time<br>driver = webdriver.Chrome(r’C:\Users\LEGION\AppData\Local\Programs\Python\Python37-32\Lib\site-packages\selenium\webdriver\chrome\chromedriver.exe’)<br>url = r’https:\y.qq.com\portal\search.html#page=1&amp;searchid=1&amp;remoteplace=txt.yqq.top&amp;t=song&amp;w=%E4%BC%A4%E5%BF%83%E5%A4%AA%E5%B9%B3%E6%B4%8B’<br>driver.get(url)<br>友情提示1.路径用反斜杠 2.记得路径前加r要不然编码错误</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/19/音乐下载器（一）/" data-id="ck4bo2lo4000ai0tewwtx3xu0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/20/爬虫（8）/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">爬虫（8）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/19/音乐下载器（一）/">音乐下载器（一）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/20/爬虫（8）/">爬虫（8）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/04/爬虫（7）/">爬虫（7）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/03/爬虫（6）/">爬虫（6）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/02/爬虫（5）/">爬虫（5）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
