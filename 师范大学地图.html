@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_40cad50b2f18151fa4ab4befa15ab385 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_40cad50b2f18151fa4ab4befa15ab385" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_40cad50b2f18151fa4ab4befa15ab385 = L.map(
+                "map_40cad50b2f18151fa4ab4befa15ab385",
+                {
+                    center: [35.8617, 104.1954],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_aa8f0eaa3efe35f1c57ea464e847d675 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_aa8f0eaa3efe35f1c57ea464e847d675.addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+            var marker_bbf5cc462ba5eda6f9ae742878966201 = L.marker(
+                [39.963, 116.362],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_995b45ee67a2b52f03c5897c7527e1cb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af3706b7a01066e5ca824224a2e42a7a = $(`<div id="html_af3706b7a01066e5ca824224a2e42a7a" style="width: 100.0%; height: 100.0%;">北京师范大学</div>`)[0];
+                popup_995b45ee67a2b52f03c5897c7527e1cb.setContent(html_af3706b7a01066e5ca824224a2e42a7a);
+            
+        
+
+        marker_bbf5cc462ba5eda6f9ae742878966201.bindPopup(popup_995b45ee67a2b52f03c5897c7527e1cb)
+        ;
+
+        
+    
+    
+            marker_bbf5cc462ba5eda6f9ae742878966201.bindTooltip(
+                `<div>
+                     北京师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_594a9a079d1cf24378828656aab423bd = L.marker(
+                [31.226, 121.407],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_dfbe68336816c5dbcda6166669cbe788 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4af06ccde7607abdfdb580e8d34f985f = $(`<div id="html_4af06ccde7607abdfdb580e8d34f985f" style="width: 100.0%; height: 100.0%;">华东师范大学</div>`)[0];
+                popup_dfbe68336816c5dbcda6166669cbe788.setContent(html_4af06ccde7607abdfdb580e8d34f985f);
+            
+        
+
+        marker_594a9a079d1cf24378828656aab423bd.bindPopup(popup_dfbe68336816c5dbcda6166669cbe788)
+        ;
+
+        
+    
+    
+            marker_594a9a079d1cf24378828656aab423bd.bindTooltip(
+                `<div>
+                     华东师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f2d9f429cb43ce333a0a0c58a1974a5e = L.marker(
+                [43.839, 125.323],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_ebaa5f2770cb42e252bc1d7810101b56 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6bc18355da6c38b600519b258a0c8af3 = $(`<div id="html_6bc18355da6c38b600519b258a0c8af3" style="width: 100.0%; height: 100.0%;">东北师范大学</div>`)[0];
+                popup_ebaa5f2770cb42e252bc1d7810101b56.setContent(html_6bc18355da6c38b600519b258a0c8af3);
+            
+        
+
+        marker_f2d9f429cb43ce333a0a0c58a1974a5e.bindPopup(popup_ebaa5f2770cb42e252bc1d7810101b56)
+        ;
+
+        
+    
+    
+            marker_f2d9f429cb43ce333a0a0c58a1974a5e.bindTooltip(
+                `<div>
+                     东北师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7f079ac77a5654b2e3feed3ed960453c = L.marker(
+                [30.528, 114.364],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_3a11bc2b146461430e82d75c871b1620 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1de4ffc70a738de6e149ae91b4a19398 = $(`<div id="html_1de4ffc70a738de6e149ae91b4a19398" style="width: 100.0%; height: 100.0%;">华中师范大学</div>`)[0];
+                popup_3a11bc2b146461430e82d75c871b1620.setContent(html_1de4ffc70a738de6e149ae91b4a19398);
+            
+        
+
+        marker_7f079ac77a5654b2e3feed3ed960453c.bindPopup(popup_3a11bc2b146461430e82d75c871b1620)
+        ;
+
+        
+    
+    
+            marker_7f079ac77a5654b2e3feed3ed960453c.bindTooltip(
+                `<div>
+                     华中师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c17d5b1c206b7eff5214b3aecaf1141b = L.marker(
+                [32.079, 118.825],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_b4af23a499174cfa95d356b3ca0d8ed4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be1ab574ae7fd5166e924e40591dd998 = $(`<div id="html_be1ab574ae7fd5166e924e40591dd998" style="width: 100.0%; height: 100.0%;">南京师范大学</div>`)[0];
+                popup_b4af23a499174cfa95d356b3ca0d8ed4.setContent(html_be1ab574ae7fd5166e924e40591dd998);
+            
+        
+
+        marker_c17d5b1c206b7eff5214b3aecaf1141b.bindPopup(popup_b4af23a499174cfa95d356b3ca0d8ed4)
+        ;
+
+        
+    
+    
+            marker_c17d5b1c206b7eff5214b3aecaf1141b.bindTooltip(
+                `<div>
+                     南京师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_206d5221ae6555f7a751404ebb26dd65 = L.marker(
+                [28.195, 112.946],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_78d44623a0baeb5ab15f903b5f9d2955 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2981a7e350a13dfd8c665fcf03d3514f = $(`<div id="html_2981a7e350a13dfd8c665fcf03d3514f" style="width: 100.0%; height: 100.0%;">湖南师范大学</div>`)[0];
+                popup_78d44623a0baeb5ab15f903b5f9d2955.setContent(html_2981a7e350a13dfd8c665fcf03d3514f);
+            
+        
+
+        marker_206d5221ae6555f7a751404ebb26dd65.bindPopup(popup_78d44623a0baeb5ab15f903b5f9d2955)
+        ;
+
+        
+    
+    
+            marker_206d5221ae6555f7a751404ebb26dd65.bindTooltip(
+                `<div>
+                     湖南师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_322a7ccf977dee6f5747d94e75eafde8 = L.marker(
+                [23.155, 113.351],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_7afe516e6ef9a3081f2c08c03d00c253 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e296efed69edbf9b4c18a1b380525424 = $(`<div id="html_e296efed69edbf9b4c18a1b380525424" style="width: 100.0%; height: 100.0%;">华南师范大学</div>`)[0];
+                popup_7afe516e6ef9a3081f2c08c03d00c253.setContent(html_e296efed69edbf9b4c18a1b380525424);
+            
+        
+
+        marker_322a7ccf977dee6f5747d94e75eafde8.bindPopup(popup_7afe516e6ef9a3081f2c08c03d00c253)
+        ;
+
+        
+    
+    
+            marker_322a7ccf977dee6f5747d94e75eafde8.bindTooltip(
+                `<div>
+                     华南师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_29c727038656146667aaec1ad51ce4db = L.marker(
+                [34.2, 108.951],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_61c79757115e59dd869ea1d0b76cbcbb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d114874b62b692236c6d7581f3bb7196 = $(`<div id="html_d114874b62b692236c6d7581f3bb7196" style="width: 100.0%; height: 100.0%;">陕西师范大学</div>`)[0];
+                popup_61c79757115e59dd869ea1d0b76cbcbb.setContent(html_d114874b62b692236c6d7581f3bb7196);
+            
+        
+
+        marker_29c727038656146667aaec1ad51ce4db.bindPopup(popup_61c79757115e59dd869ea1d0b76cbcbb)
+        ;
+
+        
+    
+    
+            marker_29c727038656146667aaec1ad51ce4db.bindTooltip(
+                `<div>
+                     陕西师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_504f34e29af053bc8af8a808ee07ed69 = L.marker(
+                [39.921, 116.3],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_5322719e2abaa1bebe5b5a6419d2e0c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c9bfef71cc5cd07c456ff8b24d1b7c7f = $(`<div id="html_c9bfef71cc5cd07c456ff8b24d1b7c7f" style="width: 100.0%; height: 100.0%;">首都师范大学</div>`)[0];
+                popup_5322719e2abaa1bebe5b5a6419d2e0c1.setContent(html_c9bfef71cc5cd07c456ff8b24d1b7c7f);
+            
+        
+
+        marker_504f34e29af053bc8af8a808ee07ed69.bindPopup(popup_5322719e2abaa1bebe5b5a6419d2e0c1)
+        ;
+
+        
+    
+    
+            marker_504f34e29af053bc8af8a808ee07ed69.bindTooltip(
+                `<div>
+                     首都师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7c4bb3cb8a44e0fd8f23ef2ca8d2df7c = L.marker(
+                [29.109, 119.651],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_ce8bd1fafb119b3fdb38599cba6e1c02 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1fc4d9c9c502fab66c48a2518eee5b07 = $(`<div id="html_1fc4d9c9c502fab66c48a2518eee5b07" style="width: 100.0%; height: 100.0%;">浙江师范大学</div>`)[0];
+                popup_ce8bd1fafb119b3fdb38599cba6e1c02.setContent(html_1fc4d9c9c502fab66c48a2518eee5b07);
+            
+        
+
+        marker_7c4bb3cb8a44e0fd8f23ef2ca8d2df7c.bindPopup(popup_ce8bd1fafb119b3fdb38599cba6e1c02)
+        ;
+
+        
+    
+    
+            marker_7c4bb3cb8a44e0fd8f23ef2ca8d2df7c.bindTooltip(
+                `<div>
+                     浙江师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e6355d4f1ee092c75011df5beb761e7d = L.marker(
+                [26.046, 119.208],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_dab1e1d22825b86e7bdd17b55f54dac9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_719d40ce118b649435edec68e26b1246 = $(`<div id="html_719d40ce118b649435edec68e26b1246" style="width: 100.0%; height: 100.0%;">福建师范大学</div>`)[0];
+                popup_dab1e1d22825b86e7bdd17b55f54dac9.setContent(html_719d40ce118b649435edec68e26b1246);
+            
+        
+
+        marker_e6355d4f1ee092c75011df5beb761e7d.bindPopup(popup_dab1e1d22825b86e7bdd17b55f54dac9)
+        ;
+
+        
+    
+    
+            marker_e6355d4f1ee092c75011df5beb761e7d.bindTooltip(
+                `<div>
+                     福建师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2ad126560635d2d2903fd27c6f69065a = L.marker(
+                [39.076, 117.13],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_658ca5e31e3bbf240d61cd34c315414b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0e2903de080d8ceebdc36376e4e17e9d = $(`<div id="html_0e2903de080d8ceebdc36376e4e17e9d" style="width: 100.0%; height: 100.0%;">天津师范大学</div>`)[0];
+                popup_658ca5e31e3bbf240d61cd34c315414b.setContent(html_0e2903de080d8ceebdc36376e4e17e9d);
+            
+        
+
+        marker_2ad126560635d2d2903fd27c6f69065a.bindPopup(popup_658ca5e31e3bbf240d61cd34c315414b)
+        ;
+
+        
+    
+    
+            marker_2ad126560635d2d2903fd27c6f69065a.bindTooltip(
+                `<div>
+                     天津师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_78b69160c07a418e6f8cd3f3b594f069 = L.marker(
+                [36.666, 117.067],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_980c3953a3b61a0d82cfdea461f6aa03 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7f6e1dde82da8efe281df4e13d70830f = $(`<div id="html_7f6e1dde82da8efe281df4e13d70830f" style="width: 100.0%; height: 100.0%;">山东师范大学</div>`)[0];
+                popup_980c3953a3b61a0d82cfdea461f6aa03.setContent(html_7f6e1dde82da8efe281df4e13d70830f);
+            
+        
+
+        marker_78b69160c07a418e6f8cd3f3b594f069.bindPopup(popup_980c3953a3b61a0d82cfdea461f6aa03)
+        ;
+
+        
+    
+    
+            marker_78b69160c07a418e6f8cd3f3b594f069.bindTooltip(
+                `<div>
+                     山东师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1aa733f821d57531aa431e51c697f71e = L.marker(
+                [35.334, 113.917],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_5c6deb07c1ec3cc002ab0f2ab47ecf40 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_50cf6ed79db75d1c2880de975bbe0bfc = $(`<div id="html_50cf6ed79db75d1c2880de975bbe0bfc" style="width: 100.0%; height: 100.0%;">河南师范大学</div>`)[0];
+                popup_5c6deb07c1ec3cc002ab0f2ab47ecf40.setContent(html_50cf6ed79db75d1c2880de975bbe0bfc);
+            
+        
+
+        marker_1aa733f821d57531aa431e51c697f71e.bindPopup(popup_5c6deb07c1ec3cc002ab0f2ab47ecf40)
+        ;
+
+        
+    
+    
+            marker_1aa733f821d57531aa431e51c697f71e.bindTooltip(
+                `<div>
+                     河南师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ae15e369ed46ce6c61532898c0bc7b2d = L.marker(
+                [38.064, 114.52],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_5c7942fcf9831edbd52216dd1eaee69e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a0546779d304eaa69d9755c7fc00361a = $(`<div id="html_a0546779d304eaa69d9755c7fc00361a" style="width: 100.0%; height: 100.0%;">河北师范大学</div>`)[0];
+                popup_5c7942fcf9831edbd52216dd1eaee69e.setContent(html_a0546779d304eaa69d9755c7fc00361a);
+            
+        
+
+        marker_ae15e369ed46ce6c61532898c0bc7b2d.bindPopup(popup_5c7942fcf9831edbd52216dd1eaee69e)
+        ;
+
+        
+    
+    
+            marker_ae15e369ed46ce6c61532898c0bc7b2d.bindTooltip(
+                `<div>
+                     河北师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3b4b58067c763da2e320aad596172365 = L.marker(
+                [28.683, 115.856],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_ffc53257ab38a142fb1153071ce6b588 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_beecb5003f5cb109c5be18a4f617f787 = $(`<div id="html_beecb5003f5cb109c5be18a4f617f787" style="width: 100.0%; height: 100.0%;">江西师范大学</div>`)[0];
+                popup_ffc53257ab38a142fb1153071ce6b588.setContent(html_beecb5003f5cb109c5be18a4f617f787);
+            
+        
+
+        marker_3b4b58067c763da2e320aad596172365.bindPopup(popup_ffc53257ab38a142fb1153071ce6b588)
+        ;
+
+        
+    
+    
+            marker_3b4b58067c763da2e320aad596172365.bindTooltip(
+                `<div>
+                     江西师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a59011273efdcdec1bb4baeeb5bd1703 = L.marker(
+                [30.638, 104.143],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_a84ac6b58ed4b2ec28b0b4cf4f54b7a5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2705b4cd6a68880601c967f7747e28cc = $(`<div id="html_2705b4cd6a68880601c967f7747e28cc" style="width: 100.0%; height: 100.0%;">四川师范大学</div>`)[0];
+                popup_a84ac6b58ed4b2ec28b0b4cf4f54b7a5.setContent(html_2705b4cd6a68880601c967f7747e28cc);
+            
+        
+
+        marker_a59011273efdcdec1bb4baeeb5bd1703.bindPopup(popup_a84ac6b58ed4b2ec28b0b4cf4f54b7a5)
+        ;
+
+        
+    
+    
+            marker_a59011273efdcdec1bb4baeeb5bd1703.bindTooltip(
+                `<div>
+                     四川师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_13d8363996ce4586e27055b54b0fe532 = L.marker(
+                [29.531, 106.481],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_9511e8bd349f9e0838c19dd0c3724780 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_49a2349379cbde18b8cab9da92256197 = $(`<div id="html_49a2349379cbde18b8cab9da92256197" style="width: 100.0%; height: 100.0%;">重庆师范大学</div>`)[0];
+                popup_9511e8bd349f9e0838c19dd0c3724780.setContent(html_49a2349379cbde18b8cab9da92256197);
+            
+        
+
+        marker_13d8363996ce4586e27055b54b0fe532.bindPopup(popup_9511e8bd349f9e0838c19dd0c3724780)
+        ;
+
+        
+    
+    
+            marker_13d8363996ce4586e27055b54b0fe532.bindTooltip(
+                `<div>
+                     重庆师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_aecde76aa661246f413a0eb5a8d0a93b = L.marker(
+                [36.059, 103.785],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_ce8d05246c6a360edd7417d0538334ae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5bcf4c24bd462bb047290474320de89c = $(`<div id="html_5bcf4c24bd462bb047290474320de89c" style="width: 100.0%; height: 100.0%;">西北师范大学</div>`)[0];
+                popup_ce8d05246c6a360edd7417d0538334ae.setContent(html_5bcf4c24bd462bb047290474320de89c);
+            
+        
+
+        marker_aecde76aa661246f413a0eb5a8d0a93b.bindPopup(popup_ce8d05246c6a360edd7417d0538334ae)
+        ;
+
+        
+    
+    
+            marker_aecde76aa661246f413a0eb5a8d0a93b.bindTooltip(
+                `<div>
+                     西北师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4dc8dd1ec3a7b9c2604a8cd6f04135ed = L.marker(
+                [25.045, 102.723],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_90db9a22a3cd91677d3632303e58e1ae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e9f6ee7f0f73c60d71d4fabea1eb95b7 = $(`<div id="html_e9f6ee7f0f73c60d71d4fabea1eb95b7" style="width: 100.0%; height: 100.0%;">云南师范大学</div>`)[0];
+                popup_90db9a22a3cd91677d3632303e58e1ae.setContent(html_e9f6ee7f0f73c60d71d4fabea1eb95b7);
+            
+        
+
+        marker_4dc8dd1ec3a7b9c2604a8cd6f04135ed.bindPopup(popup_90db9a22a3cd91677d3632303e58e1ae)
+        ;
+
+        
+    
+    
+            marker_4dc8dd1ec3a7b9c2604a8cd6f04135ed.bindTooltip(
+                `<div>
+                     云南师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a059cba30b21afa8bdf3447c251dcad3 = L.marker(
+                [25.297, 110.306],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_a81b3153bc5d535da308f611cf2fe25b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c6f88551e43c84813e0f002c82fe4d67 = $(`<div id="html_c6f88551e43c84813e0f002c82fe4d67" style="width: 100.0%; height: 100.0%;">广西师范大学</div>`)[0];
+                popup_a81b3153bc5d535da308f611cf2fe25b.setContent(html_c6f88551e43c84813e0f002c82fe4d67);
+            
+        
+
+        marker_a059cba30b21afa8bdf3447c251dcad3.bindPopup(popup_a81b3153bc5d535da308f611cf2fe25b)
+        ;
+
+        
+    
+    
+            marker_a059cba30b21afa8bdf3447c251dcad3.bindTooltip(
+                `<div>
+                     广西师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bbb306bba9c1630ea2c21196a04d98cf = L.marker(
+                [45.706, 126.619],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_fa598fec92ca7e65b0cfde11d6d75627 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_81ef26c8ba6910ea33c5a2901193f15d = $(`<div id="html_81ef26c8ba6910ea33c5a2901193f15d" style="width: 100.0%; height: 100.0%;">哈尔滨师范大学</div>`)[0];
+                popup_fa598fec92ca7e65b0cfde11d6d75627.setContent(html_81ef26c8ba6910ea33c5a2901193f15d);
+            
+        
+
+        marker_bbb306bba9c1630ea2c21196a04d98cf.bindPopup(popup_fa598fec92ca7e65b0cfde11d6d75627)
+        ;
+
+        
+    
+    
+            marker_bbb306bba9c1630ea2c21196a04d98cf.bindTooltip(
+                `<div>
+                     哈尔滨师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6e09732ef8407cbd37bb5fe0d15848dc = L.marker(
+                [41.905, 123.4],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_37be8d8ac8dddfacd96bcc831d4b0163 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7ff33fa0618e3b0e0a7069b7a9b23f65 = $(`<div id="html_7ff33fa0618e3b0e0a7069b7a9b23f65" style="width: 100.0%; height: 100.0%;">沈阳师范大学</div>`)[0];
+                popup_37be8d8ac8dddfacd96bcc831d4b0163.setContent(html_7ff33fa0618e3b0e0a7069b7a9b23f65);
+            
+        
+
+        marker_6e09732ef8407cbd37bb5fe0d15848dc.bindPopup(popup_37be8d8ac8dddfacd96bcc831d4b0163)
+        ;
+
+        
+    
+    
+            marker_6e09732ef8407cbd37bb5fe0d15848dc.bindTooltip(
+                `<div>
+                     沈阳师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_45c091bd66bceede066838a79ffdbcd8 = L.marker(
+                [38.882, 121.527],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_aedd516918e5e864ae6a162c53485ff2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d80594b56c8d4bf80ab604975c469078 = $(`<div id="html_d80594b56c8d4bf80ab604975c469078" style="width: 100.0%; height: 100.0%;">辽宁师范大学</div>`)[0];
+                popup_aedd516918e5e864ae6a162c53485ff2.setContent(html_d80594b56c8d4bf80ab604975c469078);
+            
+        
+
+        marker_45c091bd66bceede066838a79ffdbcd8.bindPopup(popup_aedd516918e5e864ae6a162c53485ff2)
+        ;
+
+        
+    
+    
+            marker_45c091bd66bceede066838a79ffdbcd8.bindTooltip(
+                `<div>
+                     辽宁师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b813767494f459874f3ef11857130327 = L.marker(
+                [43.957, 125.385],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_c7a3c4e399d8efa20bfd4e0ce292d4d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dbf42ca853eca702b985f6d48bc97103 = $(`<div id="html_dbf42ca853eca702b985f6d48bc97103" style="width: 100.0%; height: 100.0%;">长春师范大学</div>`)[0];
+                popup_c7a3c4e399d8efa20bfd4e0ce292d4d6.setContent(html_dbf42ca853eca702b985f6d48bc97103);
+            
+        
+
+        marker_b813767494f459874f3ef11857130327.bindPopup(popup_c7a3c4e399d8efa20bfd4e0ce292d4d6)
+        ;
+
+        
+    
+    
+            marker_b813767494f459874f3ef11857130327.bindTooltip(
+                `<div>
+                     长春师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_690781e559dbbd425741c434a4bbe2b2 = L.marker(
+                [42.99, 124.437],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_fa453090609e88cbdacbec3e492387d4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_27369aa2d0ed2730a5e56d25c9580135 = $(`<div id="html_27369aa2d0ed2730a5e56d25c9580135" style="width: 100.0%; height: 100.0%;">吉林师范大学</div>`)[0];
+                popup_fa453090609e88cbdacbec3e492387d4.setContent(html_27369aa2d0ed2730a5e56d25c9580135);
+            
+        
+
+        marker_690781e559dbbd425741c434a4bbe2b2.bindPopup(popup_fa453090609e88cbdacbec3e492387d4)
+        ;
+
+        
+    
+    
+            marker_690781e559dbbd425741c434a4bbe2b2.bindTooltip(
+                `<div>
+                     吉林师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_db76eeb3ba9f0e2f93cc524ea35ab334 = L.marker(
+                [31.157, 121.431],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_6013ebe08c9843dfe6b6e371790f1a60 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_da3bce5eb3c550872857069ca2ebf652 = $(`<div id="html_da3bce5eb3c550872857069ca2ebf652" style="width: 100.0%; height: 100.0%;">上海师范大学</div>`)[0];
+                popup_6013ebe08c9843dfe6b6e371790f1a60.setContent(html_da3bce5eb3c550872857069ca2ebf652);
+            
+        
+
+        marker_db76eeb3ba9f0e2f93cc524ea35ab334.bindPopup(popup_6013ebe08c9843dfe6b6e371790f1a60)
+        ;
+
+        
+    
+    
+            marker_db76eeb3ba9f0e2f93cc524ea35ab334.bindTooltip(
+                `<div>
+                     上海师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f8b829c23b45c121a1a50a200a17ac2c = L.marker(
+                [34.269, 117.195],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_9c1c3cbfb85f9c024cf0834ab8fce66d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2edfea0c9b72c54566d34ec2ed6aa0f6 = $(`<div id="html_2edfea0c9b72c54566d34ec2ed6aa0f6" style="width: 100.0%; height: 100.0%;">江苏师范大学</div>`)[0];
+                popup_9c1c3cbfb85f9c024cf0834ab8fce66d.setContent(html_2edfea0c9b72c54566d34ec2ed6aa0f6);
+            
+        
+
+        marker_f8b829c23b45c121a1a50a200a17ac2c.bindPopup(popup_9c1c3cbfb85f9c024cf0834ab8fce66d)
+        ;
+
+        
+    
+    
+            marker_f8b829c23b45c121a1a50a200a17ac2c.bindTooltip(
+                `<div>
+                     江苏师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_22cc0547c5089d7518fb7b5eb27a5efd = L.marker(
+                [30.342, 120.007],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_34f5298af929c18963d86929d95ad5b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_05f155164b4039be25942ceb30d87f78 = $(`<div id="html_05f155164b4039be25942ceb30d87f78" style="width: 100.0%; height: 100.0%;">杭州师范大学</div>`)[0];
+                popup_34f5298af929c18963d86929d95ad5b6.setContent(html_05f155164b4039be25942ceb30d87f78);
+            
+        
+
+        marker_22cc0547c5089d7518fb7b5eb27a5efd.bindPopup(popup_34f5298af929c18963d86929d95ad5b6)
+        ;
+
+        
+    
+    
+            marker_22cc0547c5089d7518fb7b5eb27a5efd.bindTooltip(
+                `<div>
+                     杭州师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_39ae20467e33409c8e704917950a0c3c = L.marker(
+                [31.341, 118.397],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_4303f30e861da5ecd6ead0a26dedc09b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a8b48f8e0963afb82438ae74288bf9c3 = $(`<div id="html_a8b48f8e0963afb82438ae74288bf9c3" style="width: 100.0%; height: 100.0%;">安徽师范大学</div>`)[0];
+                popup_4303f30e861da5ecd6ead0a26dedc09b.setContent(html_a8b48f8e0963afb82438ae74288bf9c3);
+            
+        
+
+        marker_39ae20467e33409c8e704917950a0c3c.bindPopup(popup_4303f30e861da5ecd6ead0a26dedc09b)
+        ;
+
+        
+    
+    
+            marker_39ae20467e33409c8e704917950a0c3c.bindTooltip(
+                `<div>
+                     安徽师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_16f4d776ba7caff9572608be725ee87a = L.marker(
+                [31.849, 117.247],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_5bc6a8725eb35e75417843f69b9919de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3313a61b72339df03a25b9cabd825271 = $(`<div id="html_3313a61b72339df03a25b9cabd825271" style="width: 100.0%; height: 100.0%;">合肥师范学院</div>`)[0];
+                popup_5bc6a8725eb35e75417843f69b9919de.setContent(html_3313a61b72339df03a25b9cabd825271);
+            
+        
+
+        marker_16f4d776ba7caff9572608be725ee87a.bindPopup(popup_5bc6a8725eb35e75417843f69b9919de)
+        ;
+
+        
+    
+    
+            marker_16f4d776ba7caff9572608be725ee87a.bindTooltip(
+                `<div>
+                     合肥师范学院
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_71f83241ae142143ab07d334ca88cc2e = L.marker(
+                [33.971, 116.804],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_ee8b872643513394b514636396603858 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0a8cdb4af8ecbaa8d4c31fdf7b46ea0a = $(`<div id="html_0a8cdb4af8ecbaa8d4c31fdf7b46ea0a" style="width: 100.0%; height: 100.0%;">淮北师范大学</div>`)[0];
+                popup_ee8b872643513394b514636396603858.setContent(html_0a8cdb4af8ecbaa8d4c31fdf7b46ea0a);
+            
+        
+
+        marker_71f83241ae142143ab07d334ca88cc2e.bindPopup(popup_ee8b872643513394b514636396603858)
+        ;
+
+        
+    
+    
+            marker_71f83241ae142143ab07d334ca88cc2e.bindTooltip(
+                `<div>
+                     淮北师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_355c0e47af2310f0ae3999ddf9deda04 = L.marker(
+                [30.559, 117.078],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_ed865d77656a9249e5a77f17f034cf70 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6ea1df1b85a4aa654f785c41021fac12 = $(`<div id="html_6ea1df1b85a4aa654f785c41021fac12" style="width: 100.0%; height: 100.0%;">安庆师范大学</div>`)[0];
+                popup_ed865d77656a9249e5a77f17f034cf70.setContent(html_6ea1df1b85a4aa654f785c41021fac12);
+            
+        
+
+        marker_355c0e47af2310f0ae3999ddf9deda04.bindPopup(popup_ed865d77656a9249e5a77f17f034cf70)
+        ;
+
+        
+    
+    
+            marker_355c0e47af2310f0ae3999ddf9deda04.bindTooltip(
+                `<div>
+                     安庆师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_267eb565bf8ecb0f94941ea6e01ef900 = L.marker(
+                [24.52, 117.653],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_16dce2378786ecbb85852ccb3f54778d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2fe27b325b66141a48d1710b6840d6b2 = $(`<div id="html_2fe27b325b66141a48d1710b6840d6b2" style="width: 100.0%; height: 100.0%;">闽南师范大学</div>`)[0];
+                popup_16dce2378786ecbb85852ccb3f54778d.setContent(html_2fe27b325b66141a48d1710b6840d6b2);
+            
+        
+
+        marker_267eb565bf8ecb0f94941ea6e01ef900.bindPopup(popup_16dce2378786ecbb85852ccb3f54778d)
+        ;
+
+        
+    
+    
+            marker_267eb565bf8ecb0f94941ea6e01ef900.bindTooltip(
+                `<div>
+                     闽南师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ea440b69713f7bd16d548d2509110bd3 = L.marker(
+                [28.694, 115.823],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_b35a2e76456cb503fd77beb3ca0e8746 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fc1411e122deaa3888f2f032b4a62c66 = $(`<div id="html_fc1411e122deaa3888f2f032b4a62c66" style="width: 100.0%; height: 100.0%;">江西科技师范大学</div>`)[0];
+                popup_b35a2e76456cb503fd77beb3ca0e8746.setContent(html_fc1411e122deaa3888f2f032b4a62c66);
+            
+        
+
+        marker_ea440b69713f7bd16d548d2509110bd3.bindPopup(popup_b35a2e76456cb503fd77beb3ca0e8746)
+        ;
+
+        
+    
+    
+            marker_ea440b69713f7bd16d548d2509110bd3.bindTooltip(
+                `<div>
+                     江西科技师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fc68a8a3ebd647a3a98f3b19bf261ad5 = L.marker(
+                [25.845, 114.945],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_3b1ce4e84183a7e65aecc7ba315e984f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_afea1be60438d1cbc5ac117b7f842c51 = $(`<div id="html_afea1be60438d1cbc5ac117b7f842c51" style="width: 100.0%; height: 100.0%;">赣南师范大学</div>`)[0];
+                popup_3b1ce4e84183a7e65aecc7ba315e984f.setContent(html_afea1be60438d1cbc5ac117b7f842c51);
+            
+        
+
+        marker_fc68a8a3ebd647a3a98f3b19bf261ad5.bindPopup(popup_3b1ce4e84183a7e65aecc7ba315e984f)
+        ;
+
+        
+    
+    
+            marker_fc68a8a3ebd647a3a98f3b19bf261ad5.bindTooltip(
+                `<div>
+                     赣南师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7044e273c4c7aee0565362c6fdbba0dd = L.marker(
+                [35.59, 116.985],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_193b102bfdecfbc61041e0a78f98ac8d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4f580746cc7f549eefdffcfd66ea7c87 = $(`<div id="html_4f580746cc7f549eefdffcfd66ea7c87" style="width: 100.0%; height: 100.0%;">曲阜师范大学</div>`)[0];
+                popup_193b102bfdecfbc61041e0a78f98ac8d.setContent(html_4f580746cc7f549eefdffcfd66ea7c87);
+            
+        
+
+        marker_7044e273c4c7aee0565362c6fdbba0dd.bindPopup(popup_193b102bfdecfbc61041e0a78f98ac8d)
+        ;
+
+        
+    
+    
+            marker_7044e273c4c7aee0565362c6fdbba0dd.bindTooltip(
+                `<div>
+                     曲阜师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2098addaf703ca8f5bd8661d4a59c2a0 = L.marker(
+                [32.144, 114.076],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_2512750eec11f6594a6c60253d9150a2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2be3b0dd1833e1a6c031ddb950eedabe = $(`<div id="html_2be3b0dd1833e1a6c031ddb950eedabe" style="width: 100.0%; height: 100.0%;">信阳师范学院</div>`)[0];
+                popup_2512750eec11f6594a6c60253d9150a2.setContent(html_2be3b0dd1833e1a6c031ddb950eedabe);
+            
+        
+
+        marker_2098addaf703ca8f5bd8661d4a59c2a0.bindPopup(popup_2512750eec11f6594a6c60253d9150a2)
+        ;
+
+        
+    
+    
+            marker_2098addaf703ca8f5bd8661d4a59c2a0.bindTooltip(
+                `<div>
+                     信阳师范学院
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8d5d7826191aabd862d05b3713a75c3c = L.marker(
+                [34.63, 112.428],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_2d09226e36c922723cd87eb31300a363 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1bd3faa9e8c77db37405acb3f956ec6b = $(`<div id="html_1bd3faa9e8c77db37405acb3f956ec6b" style="width: 100.0%; height: 100.0%;">洛阳师范学院</div>`)[0];
+                popup_2d09226e36c922723cd87eb31300a363.setContent(html_1bd3faa9e8c77db37405acb3f956ec6b);
+            
+        
+
+        marker_8d5d7826191aabd862d05b3713a75c3c.bindPopup(popup_2d09226e36c922723cd87eb31300a363)
+        ;
+
+        
+    
+    
+            marker_8d5d7826191aabd862d05b3713a75c3c.bindTooltip(
+                `<div>
+                     洛阳师范学院
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e365da9c0fdcb5919ba7472bd1bed8f5 = L.marker(
+                [30.222, 115.06],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_237d2b7771d7796f185d0b34ae83658a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_30ea6e83032b1242011a055cae8b89b5 = $(`<div id="html_30ea6e83032b1242011a055cae8b89b5" style="width: 100.0%; height: 100.0%;">湖北师范大学</div>`)[0];
+                popup_237d2b7771d7796f185d0b34ae83658a.setContent(html_30ea6e83032b1242011a055cae8b89b5);
+            
+        
+
+        marker_e365da9c0fdcb5919ba7472bd1bed8f5.bindPopup(popup_237d2b7771d7796f185d0b34ae83658a)
+        ;
+
+        
+    
+    
+            marker_e365da9c0fdcb5919ba7472bd1bed8f5.bindTooltip(
+                `<div>
+                     湖北师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bc5fdb9d226e89bb8dd25d1023ad49d1 = L.marker(
+                [30.457, 114.887],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_9e86c83ea8b15fca8d4d4c829c3e5937 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_520e43e411d77c7b1c16250e86c522b6 = $(`<div id="html_520e43e411d77c7b1c16250e86c522b6" style="width: 100.0%; height: 100.0%;">黄冈师范学院</div>`)[0];
+                popup_9e86c83ea8b15fca8d4d4c829c3e5937.setContent(html_520e43e411d77c7b1c16250e86c522b6);
+            
+        
+
+        marker_bc5fdb9d226e89bb8dd25d1023ad49d1.bindPopup(popup_9e86c83ea8b15fca8d4d4c829c3e5937)
+        ;
+
+        
+    
+    
+            marker_bc5fdb9d226e89bb8dd25d1023ad49d1.bindTooltip(
+                `<div>
+                     黄冈师范学院
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_01a718c021762a4aa34fff0191914b52 = L.marker(
+                [28.118, 112.989],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_9ed99af711d45359a13fbcbd7a52b890 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_298f0ee355f25f1e5b6483f255bb04f8 = $(`<div id="html_298f0ee355f25f1e5b6483f255bb04f8" style="width: 100.0%; height: 100.0%;">湖南第一师范学院</div>`)[0];
+                popup_9ed99af711d45359a13fbcbd7a52b890.setContent(html_298f0ee355f25f1e5b6483f255bb04f8);
+            
+        
+
+        marker_01a718c021762a4aa34fff0191914b52.bindPopup(popup_9ed99af711d45359a13fbcbd7a52b890)
+        ;
+
+        
+    
+    
+            marker_01a718c021762a4aa34fff0191914b52.bindTooltip(
+                `<div>
+                     湖南第一师范学院
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4e0dd3a20c84754c12fc47faa8d302b6 = L.marker(
+                [23.104, 113.415],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_caba20d8b196b55e8e1ff577850013b8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0e0ffe2366b5da6b00cc3dd6f0f1b67c = $(`<div id="html_0e0ffe2366b5da6b00cc3dd6f0f1b67c" style="width: 100.0%; height: 100.0%;">广东技术师范大学</div>`)[0];
+                popup_caba20d8b196b55e8e1ff577850013b8.setContent(html_0e0ffe2366b5da6b00cc3dd6f0f1b67c);
+            
+        
+
+        marker_4e0dd3a20c84754c12fc47faa8d302b6.bindPopup(popup_caba20d8b196b55e8e1ff577850013b8)
+        ;
+
+        
+    
+    
+            marker_4e0dd3a20c84754c12fc47faa8d302b6.bindTooltip(
+                `<div>
+                     广东技术师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_214678a6bc204a958dd057a696162a8b = L.marker(
+                [29.626, 106.666],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_89b5813514f3efef7d3ca2b91516c4a5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f0e4267da6bbcf091c43f2774c1df1f7 = $(`<div id="html_f0e4267da6bbcf091c43f2774c1df1f7" style="width: 100.0%; height: 100.0%;">重庆第二师范学院</div>`)[0];
+                popup_89b5813514f3efef7d3ca2b91516c4a5.setContent(html_f0e4267da6bbcf091c43f2774c1df1f7);
+            
+        
+
+        marker_214678a6bc204a958dd057a696162a8b.bindPopup(popup_89b5813514f3efef7d3ca2b91516c4a5)
+        ;
+
+        
+    
+    
+            marker_214678a6bc204a958dd057a696162a8b.bindTooltip(
+                `<div>
+                     重庆第二师范学院
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9d6c470e844eaaaf0589e9f288b6f98c = L.marker(
+                [30.825, 106.071],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_662f2c89744cef88baf64efec0f246fb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9776ea9a7a20111b76665ad0094da6fa = $(`<div id="html_9776ea9a7a20111b76665ad0094da6fa" style="width: 100.0%; height: 100.0%;">西华师范大学</div>`)[0];
+                popup_662f2c89744cef88baf64efec0f246fb.setContent(html_9776ea9a7a20111b76665ad0094da6fa);
+            
+        
+
+        marker_9d6c470e844eaaaf0589e9f288b6f98c.bindPopup(popup_662f2c89744cef88baf64efec0f246fb)
+        ;
+
+        
+    
+    
+            marker_9d6c470e844eaaaf0589e9f288b6f98c.bindTooltip(
+                `<div>
+                     西华师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_279607dfa98e44f2600c156effc4c771 = L.marker(
+                [30.76, 103.951],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_38478c736a7cb4bdd06c29bf6166eff9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d39400f7d2b8b161d56db6e8b8de8d7 = $(`<div id="html_1d39400f7d2b8b161d56db6e8b8de8d7" style="width: 100.0%; height: 100.0%;">成都师范学院</div>`)[0];
+                popup_38478c736a7cb4bdd06c29bf6166eff9.setContent(html_1d39400f7d2b8b161d56db6e8b8de8d7);
+            
+        
+
+        marker_279607dfa98e44f2600c156effc4c771.bindPopup(popup_38478c736a7cb4bdd06c29bf6166eff9)
+        ;
+
+        
+    
+    
+            marker_279607dfa98e44f2600c156effc4c771.bindTooltip(
+                `<div>
+                     成都师范学院
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_64601eb3cf924887c04bc23b6b6cf5da = L.marker(
+                [26.574, 106.689],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_d2cc7608978ed694181cf63b63cafc4e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_616f781f056c622400d3193ba3e84c31 = $(`<div id="html_616f781f056c622400d3193ba3e84c31" style="width: 100.0%; height: 100.0%;">贵州师范大学</div>`)[0];
+                popup_d2cc7608978ed694181cf63b63cafc4e.setContent(html_616f781f056c622400d3193ba3e84c31);
+            
+        
+
+        marker_64601eb3cf924887c04bc23b6b6cf5da.bindPopup(popup_d2cc7608978ed694181cf63b63cafc4e)
+        ;
+
+        
+    
+    
+            marker_64601eb3cf924887c04bc23b6b6cf5da.bindTooltip(
+                `<div>
+                     贵州师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_40b54ed4746c107639f4f46a3ed84074 = L.marker(
+                [26.657, 106.643],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_3a34211521878a0181abac90775f3539 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_38bc3e1b75ff122fad360eb0c98eec92 = $(`<div id="html_38bc3e1b75ff122fad360eb0c98eec92" style="width: 100.0%; height: 100.0%;">贵州师范学院</div>`)[0];
+                popup_3a34211521878a0181abac90775f3539.setContent(html_38bc3e1b75ff122fad360eb0c98eec92);
+            
+        
+
+        marker_40b54ed4746c107639f4f46a3ed84074.bindPopup(popup_3a34211521878a0181abac90775f3539)
+        ;
+
+        
+    
+    
+            marker_40b54ed4746c107639f4f46a3ed84074.bindTooltip(
+                `<div>
+                     贵州师范学院
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5677042446a5f78f99910968dc748a76 = L.marker(
+                [27.771, 107.001],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_cb57125727ebf942e0c99c69cf74c312 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7f3e93451234d7d4acdf720a4f5cec39 = $(`<div id="html_7f3e93451234d7d4acdf720a4f5cec39" style="width: 100.0%; height: 100.0%;">遵义师范学院</div>`)[0];
+                popup_cb57125727ebf942e0c99c69cf74c312.setContent(html_7f3e93451234d7d4acdf720a4f5cec39);
+            
+        
+
+        marker_5677042446a5f78f99910968dc748a76.bindPopup(popup_cb57125727ebf942e0c99c69cf74c312)
+        ;
+
+        
+    
+    
+            marker_5677042446a5f78f99910968dc748a76.bindTooltip(
+                `<div>
+                     遵义师范学院
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2b2bbf32610867aa3809d14e7ae993d5 = L.marker(
+                [24.351, 102.551],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_16305170c4f90f7f992ab25b8a17ecc8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_85cb47a9d3e94fcf7f7d999c9e546433 = $(`<div id="html_85cb47a9d3e94fcf7f7d999c9e546433" style="width: 100.0%; height: 100.0%;">玉溪师范学院</div>`)[0];
+                popup_16305170c4f90f7f992ab25b8a17ecc8.setContent(html_85cb47a9d3e94fcf7f7d999c9e546433);
+            
+        
+
+        marker_2b2bbf32610867aa3809d14e7ae993d5.bindPopup(popup_16305170c4f90f7f992ab25b8a17ecc8)
+        ;
+
+        
+    
+    
+            marker_2b2bbf32610867aa3809d14e7ae993d5.bindTooltip(
+                `<div>
+                     玉溪师范学院
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4d5a2f562a16841f4df5524e04be2d39 = L.marker(
+                [34.525, 109.497],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_1599ed02b9886a058c970f20ecdf55a8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be294486f2003edd81f2f5fb29ef460f = $(`<div id="html_be294486f2003edd81f2f5fb29ef460f" style="width: 100.0%; height: 100.0%;">渭南师范学院</div>`)[0];
+                popup_1599ed02b9886a058c970f20ecdf55a8.setContent(html_be294486f2003edd81f2f5fb29ef460f);
+            
+        
+
+        marker_4d5a2f562a16841f4df5524e04be2d39.bindPopup(popup_1599ed02b9886a058c970f20ecdf55a8)
+        ;
+
+        
+    
+    
+            marker_4d5a2f562a16841f4df5524e04be2d39.bindTooltip(
+                `<div>
+                     渭南师范学院
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4a285eb88399010a6f95dc2a90276d21 = L.marker(
+                [34.336, 108.683],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_f7c716703250924c2c050aa0d494aa81 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0731e1715fbeab3ce71599b5fe7bda84 = $(`<div id="html_0731e1715fbeab3ce71599b5fe7bda84" style="width: 100.0%; height: 100.0%;">咸阳师范学院</div>`)[0];
+                popup_f7c716703250924c2c050aa0d494aa81.setContent(html_0731e1715fbeab3ce71599b5fe7bda84);
+            
+        
+
+        marker_4a285eb88399010a6f95dc2a90276d21.bindPopup(popup_f7c716703250924c2c050aa0d494aa81)
+        ;
+
+        
+    
+    
+            marker_4a285eb88399010a6f95dc2a90276d21.bindTooltip(
+                `<div>
+                     咸阳师范学院
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b128a26744d155d362e9052460f6f6e5 = L.marker(
+                [34.582, 105.741],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_73e4fdb0d09bcc7e977a5432477d8370 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_23a84a0580e010f3d364966ad68f92d7 = $(`<div id="html_23a84a0580e010f3d364966ad68f92d7" style="width: 100.0%; height: 100.0%;">天水师范学院</div>`)[0];
+                popup_73e4fdb0d09bcc7e977a5432477d8370.setContent(html_23a84a0580e010f3d364966ad68f92d7);
+            
+        
+
+        marker_b128a26744d155d362e9052460f6f6e5.bindPopup(popup_73e4fdb0d09bcc7e977a5432477d8370)
+        ;
+
+        
+    
+    
+            marker_b128a26744d155d362e9052460f6f6e5.bindTooltip(
+                `<div>
+                     天水师范学院
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5f999dba3ac1b561520ccdf305c3edc4 = L.marker(
+                [36.611, 101.75],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_6d0a8aba26ea60eee2ac61bcf4f509b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0125451c8478806b38b3e1fec94a70ef = $(`<div id="html_0125451c8478806b38b3e1fec94a70ef" style="width: 100.0%; height: 100.0%;">青海师范大学</div>`)[0];
+                popup_6d0a8aba26ea60eee2ac61bcf4f509b6.setContent(html_0125451c8478806b38b3e1fec94a70ef);
+            
+        
+
+        marker_5f999dba3ac1b561520ccdf305c3edc4.bindPopup(popup_6d0a8aba26ea60eee2ac61bcf4f509b6)
+        ;
+
+        
+    
+    
+            marker_5f999dba3ac1b561520ccdf305c3edc4.bindTooltip(
+                `<div>
+                     青海师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8f4d39ce6425dd58d2fb8694016d1ea2 = L.marker(
+                [35.597, 106.273],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_48180a276ecd7c56626709507ad36fe8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a3b1896b6b72eab2170b2b4efdaaaa33 = $(`<div id="html_a3b1896b6b72eab2170b2b4efdaaaa33" style="width: 100.0%; height: 100.0%;">宁夏师范学院</div>`)[0];
+                popup_48180a276ecd7c56626709507ad36fe8.setContent(html_a3b1896b6b72eab2170b2b4efdaaaa33);
+            
+        
+
+        marker_8f4d39ce6425dd58d2fb8694016d1ea2.bindPopup(popup_48180a276ecd7c56626709507ad36fe8)
+        ;
+
+        
+    
+    
+            marker_8f4d39ce6425dd58d2fb8694016d1ea2.bindTooltip(
+                `<div>
+                     宁夏师范学院
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f628714e6410dc591fee33c735ee3938 = L.marker(
+                [43.821, 87.594],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_c1dbc66e5233346908f55de98223cbe4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b3ecd29e1be81d06a50f321aedb0111 = $(`<div id="html_1b3ecd29e1be81d06a50f321aedb0111" style="width: 100.0%; height: 100.0%;">新疆师范大学</div>`)[0];
+                popup_c1dbc66e5233346908f55de98223cbe4.setContent(html_1b3ecd29e1be81d06a50f321aedb0111);
+            
+        
+
+        marker_f628714e6410dc591fee33c735ee3938.bindPopup(popup_c1dbc66e5233346908f55de98223cbe4)
+        ;
+
+        
+    
+    
+            marker_f628714e6410dc591fee33c735ee3938.bindTooltip(
+                `<div>
+                     新疆师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_24113684b9034dcd4c58f70633f4515f = L.marker(
+                [43.921, 81.332],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_52a0b7b1356fbd63c8d4dcb9c9953a1e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3d12aac54ca0c47c66e4cf7e84448fc9 = $(`<div id="html_3d12aac54ca0c47c66e4cf7e84448fc9" style="width: 100.0%; height: 100.0%;">伊犁师范大学</div>`)[0];
+                popup_52a0b7b1356fbd63c8d4dcb9c9953a1e.setContent(html_3d12aac54ca0c47c66e4cf7e84448fc9);
+            
+        
+
+        marker_24113684b9034dcd4c58f70633f4515f.bindPopup(popup_52a0b7b1356fbd63c8d4dcb9c9953a1e)
+        ;
+
+        
+    
+    
+            marker_24113684b9034dcd4c58f70633f4515f.bindTooltip(
+                `<div>
+                     伊犁师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_94b474bacee74d2f75011da6bb36c2e6 = L.marker(
+                [40.822, 111.666],
+                {}
+            ).addTo(map_40cad50b2f18151fa4ab4befa15ab385);
+        
+    
+        var popup_5dc09783e00d6b8d4098253092c8bbdb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d38ed06bad0c17910a90834a672c13c = $(`<div id="html_1d38ed06bad0c17910a90834a672c13c" style="width: 100.0%; height: 100.0%;">内蒙古师范大学</div>`)[0];
+                popup_5dc09783e00d6b8d4098253092c8bbdb.setContent(html_1d38ed06bad0c17910a90834a672c13c);
+            
+        
+
+        marker_94b474bacee74d2f75011da6bb36c2e6.bindPopup(popup_5dc09783e00d6b8d4098253092c8bbdb)
+        ;
+
+        
+    
+    
+            marker_94b474bacee74d2f75011da6bb36c2e6.bindTooltip(
+                `<div>
+                     内蒙古师范大学
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
